@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: 测试
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/iot.png
+keywords:
+- web
+name: wuliantest
+version: 0.1.0
