@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: riotous-bunny-eclipse
+  labels:
+    app: eclipse
+    chart: eclipse-0.1.0
+    release: riotous-bunny
+    heritage: Tiller
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8080
+      protocol: TCP
+      nodePort: 30003
+      name: http
+  selector:
+    app: eclipse
+    release: riotous-bunny
+
