@@ -168,6 +168,10 @@ spec:
       - name: gossip-key
         secret:
           secretName: {{ template "consul.fullname" . }}-gossip-key
+      volumes:
+        - name: {{ .Values.persistent.name }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistent.name }}
       {{ range .Values.ConsulConfig }}
       - name: userconfig-{{ .name }}
         {{ .type }}:
