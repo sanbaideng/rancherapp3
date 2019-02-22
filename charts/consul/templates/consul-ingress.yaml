@@ -20,7 +20,7 @@ metadata:
   name: "{{ template "consul.fullname" . }}-ui"
 spec:
   rules:
-  {{- range .Values.uiIngress.hosts }}
+  {{- range .Values.ingress.hosts }}
     - host: {{ . }}
       http:
         paths:
