@@ -23,9 +23,11 @@ spec:
         - name: vol
           hostPath:
             path: /sys/fs/cgroup
+        {{- if .Values.persistent.enabled }}
         - name: {{ .Values.persistent.name }}
           persistentVolumeClaim:
             claimName: {{ .Values.persistent.name }}
+        {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -34,8 +36,10 @@ spec:
           - name: vol
             mountPath: /sys/fs/cgroup
             readOnly: true
+        {{- if .Values.persistent.enabled }}
           - name: {{ .Values.persistent.name }}
             mountPath: /persis/vol
+        {{- end }}
           securityContext:
             privileged: true
           ports:

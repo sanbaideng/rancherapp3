@@ -1,0 +1,16 @@
+{{- if .Values.persistent.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: eclipse-1
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 1Gi
+  selector:
+    matchLabels:
+      name: eclipse-1
+{{- end }}
