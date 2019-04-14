@@ -1,0 +1,10 @@
+redis:
+  pv: pv-redis
+  capacity: 10Gi
+  pvc: pvc-redis
+  ingress: re.com
+pgsql:
+  pv: pv-pgsql
+  capacity: 10Gi
+  pvc: pgsql
+  ingress: pgsql.com

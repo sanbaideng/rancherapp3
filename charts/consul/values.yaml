@@ -134,5 +134,9 @@ test:
     create: false
     serviceAccountName: ""
 
+## test container details
+config:
+  redis: pvc-redis
+  pgsql: pvc-pgsql
 nodeSelector: {}
 tolerations: []
