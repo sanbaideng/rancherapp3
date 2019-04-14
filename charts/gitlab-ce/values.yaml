@@ -5,7 +5,11 @@ redis:
   pv: redis-pv
   pvc: redis-pvc
   capacity: 8Gi
-
+postgresql:
+  pv: postgresql:-pv
+  pvc: postgresql:-pvc
+  capacity: 8Gi
+  subPath: a
 image: gitlab/gitlab-ce:9.4.1-ce.0
 
 ## Specify a imagePullPolicy
@@ -17,7 +21,7 @@ image: gitlab/gitlab-ce:9.4.1-ce.0
 ## The URL (with protocol) that your users will use to reach the install.
 ## ref: https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
 ##
-# externalUrl: http://your-domain.com/
+externalUrl: http://your-domain.com/
 
 ## Change the initial default admin password if set. If not set, you'll be
 ## able to set it when you first visit your install.
