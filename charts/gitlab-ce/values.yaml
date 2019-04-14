@@ -6,8 +6,8 @@ redis:
   pvc: redis-pvc
   capacity: 8Gi
 postgresql:
-  pv: postgresql:-pv
-  pvc: postgresql:-pvc
+  pv: postgresql-pv
+  pvc: postgresql-pvc
   capacity: 8Gi
   subPath: "postgresql-db"
 image: gitlab/gitlab-ce:9.4.1-ce.0
