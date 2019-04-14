@@ -9,7 +9,7 @@ postgresql:
   pv: postgresql:-pv
   pvc: postgresql:-pvc
   capacity: 8Gi
-  subPath: a
+  subPath: "postgresql-db"
 image: gitlab/gitlab-ce:9.4.1-ce.0
 
 ## Specify a imagePullPolicy
