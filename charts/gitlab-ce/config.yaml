@@ -8,4 +8,3 @@ pgsql:
   capacity: 10Gi
   pvc: pgsql
   ingress: pgsql.com
-  subPath: "postgresql-db"
