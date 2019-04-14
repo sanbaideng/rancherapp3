@@ -3,7 +3,7 @@ redis:
   capacity: 10Gi
   pvc: pvc-redis
   ingress: re.com
-pgsql:
+postgresql:
   pv: pv-pgsql
   capacity: 10Gi
   pvc: pgsql
