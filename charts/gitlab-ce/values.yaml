@@ -1,6 +1,11 @@
 ## GitLab CE image
 ## ref: https://hub.docker.com/r/gitlab/gitlab-ce/tags/
 ##
+redis:
+  pv: redis-pv
+  pvc: redis-pvc
+  capacity: 8Gi
+
 image: gitlab/gitlab-ce:9.4.1-ce.0
 
 ## Specify a imagePullPolicy
