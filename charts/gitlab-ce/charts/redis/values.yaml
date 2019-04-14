@@ -1,6 +1,7 @@
 ## Bitnami Redis image version
 ## ref: https://hub.docker.com/r/bitnami/redis/tags/
 ##
+pv: a
 image: bitnami/redis:3.2.9-r2
 
 ## Specify a imagePullPolicy

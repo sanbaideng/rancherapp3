@@ -87,7 +87,7 @@ spec:
       {{- if .Values.persistence.enabled }}
         persistentVolumeClaim:
           #claimName: {{ .Values.persistence.existingClaim | default (include "redis.fullname" .) }}
-          claimName: {{ .Values.redis.pvc | default (include "redis.fullname" .) }}
+          claimName: {{ .Values.pvc | default (include "redis.fullname" .) }}
       {{- else }}
         emptyDir: {}
       {{- end -}}
