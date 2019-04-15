@@ -1,5 +1,7 @@
 ## postgres image repository
-pvc: a
+pv: a
+pvc: b
+
 image: "postgres"
 ## postgres image version
 ## ref: https://hub.docker.com/r/library/postgres/tags/
