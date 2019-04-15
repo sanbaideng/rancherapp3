@@ -44,7 +44,7 @@ ingress:
       # - secretName: gitlab.cluster.local
       #   hosts:
       #     - gitlab.cluster.local
-  url: gitlab-domain.com
+  hosts: gitlab-domain.com
 
 ## Configure external service ports
 ## ref: http://kubernetes.io/docs/user-guide/services/
@@ -74,6 +74,9 @@ resources:
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 ## ref: https://docs.gitlab.com/ce/install/requirements.html#storage
 ##
+persistent:
+  name: pvcName
+
 persistence:
   ## This volume persists generated configuration files, keys, and certs.
   ##
@@ -96,7 +99,7 @@ persistence:
     ##
     # storageClass:
     accessMode: ReadWriteOnce
-  pvcName: a
+  name: a
 
 ## Configuration values for the postgresql dependency.
 ## ref: https://github.com/kubernetes/charts/blob/master/stable/postgresql/README.md

@@ -14,7 +14,7 @@ metadata:
     heritage: "{{ .Release.Service }}"
 spec:
   rules:
-  - host: {{ .Values.ingress.url | quote }}
+  - host: {{ .Values.ingress.hosts | quote }}
     {{- if (not (empty .Values.ingress.tls)) }}
     https:
       paths:
