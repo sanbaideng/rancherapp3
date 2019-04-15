@@ -110,7 +110,8 @@ spec:
       - name: gitlab-data
       {{- if .Values.persistence.gitlabData.enabled }}
         persistentVolumeClaim:
-          claimName: {{ template "gitlab-ce.fullname" . }}-data
+          #claimName: {{ template "gitlab-ce.fullname" . }}-data
+          claimName: {{ .Values.persistence.pvcName }}
       {{- else }}
         emptyDir: {}
       {{- end }}

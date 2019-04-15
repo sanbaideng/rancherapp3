@@ -96,6 +96,7 @@ persistence:
     ##
     # storageClass:
     accessMode: ReadWriteOnce
+  pvcName: a
 
 ## Configuration values for the postgresql dependency.
 ## ref: https://github.com/kubernetes/charts/blob/master/stable/postgresql/README.md

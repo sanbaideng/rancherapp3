@@ -8,3 +8,5 @@ postgresql:
   capacity: 10Gi
   pvc: pgsql
   ingress: pgsql.com
+persistence:
+  pvcName: gitlbab-pvc
