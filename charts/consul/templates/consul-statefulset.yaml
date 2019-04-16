@@ -88,7 +88,7 @@ spec:
         - name: DNSPORT
           value: "{{ .Values.ConsulDnsPort }}"
         volumeMounts:
-        - name: "{{ .Values.persistent.name }}"
+        - name: "{{ .Values.persistence.name }}"
           mountPath: /var/lib/consul
         - name: gossip-key
           mountPath: /etc/consul/secrets
@@ -168,7 +168,7 @@ spec:
       - name: gossip-key
         secret:
           secretName: {{ template "consul.fullname" . }}-gossip-key
-      - name: {{ .Values.persistent.name }}
+      - name: {{ .Values.persistence.name }}
         persistentVolumeClaim:
           claimName: {{ .Values.persistence.name }}
       {{ range .Values.ConsulConfig }}

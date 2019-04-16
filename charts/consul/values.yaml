@@ -140,3 +140,5 @@ config:
   pgsql: pvc-pgsql
 nodeSelector: {}
 tolerations: []
+persistence:
+  name : a
