@@ -10,19 +10,18 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 8081
   nodePort: 31111
   targetPort: 8080
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
-  hosts:
-    - chart-example.local
+  hosts: chart-example.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
