@@ -170,7 +170,7 @@ spec:
           secretName: {{ template "consul.fullname" . }}-gossip-key
       - name: {{ .Values.persistent.name }}
         persistentVolumeClaim:
-          claimName: {{ .Values.persistent.name }}
+          claimName: {{ .Values.persistence.name }}
       {{ range .Values.ConsulConfig }}
       - name: userconfig-{{ .name }}
         {{ .type }}:

@@ -113,11 +113,11 @@ ConsulConfig: []
 #    name: consul-defaults
 
 ## Create an Ingress for the Web UI
-uiIngress:
+ingress:
   enabled: true
   annotations: {}
   labels: {}
-  hosts: [consul-ui3.myexample.com]
+  host: consul-ui3.myexample.com
   tls: {}
 
 ## Useful when ACLs are enabled
