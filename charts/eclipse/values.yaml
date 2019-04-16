@@ -1,7 +1,7 @@
 # Default values for eclipse.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-persistent:
+persistence:
   name: "eclipse-1"
 replicaCount: 1
 
@@ -22,7 +22,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
-  hosts: [eclipse1.myexample.com]
+  hosts: eclipse1.myexample.com
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
