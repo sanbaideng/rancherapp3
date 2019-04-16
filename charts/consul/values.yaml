@@ -117,7 +117,7 @@ ingress:
   enabled: true
   annotations: {}
   labels: {}
-  host: consul-ui3.myexample.com
+  hosts: consul-ui3.myexample.com
   tls: {}
 
 ## Useful when ACLs are enabled
