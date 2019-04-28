@@ -8,7 +8,7 @@ postgresql:
   capacity: 10Gi
   pvc: pgsql
   ingress: pgsql.com
-app.pv1:
+app.main:
   pv: apv
   pvc: apvc
   capacity: 10Gi
