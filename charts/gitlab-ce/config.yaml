@@ -8,20 +8,19 @@ postgresql:
   capacity: 10Gi
   pvc: pgsql
   ingress: pgsql.com
-atest:
-  pv1:
-    pv: apv
-    pvc: apvc
-    capacity: 10Gi
-    ingress: "a"
-  pv2:
-    pv: bpv
-    pvc: bpvc
-    capacity: 10Gi
-    ingress: "b"
-  pv3:
-    pv: cpv
-    pvc: cpvc
-    capacity: 10Gi
-    ingress: "c"
+app.pv1:
+  pv: apv
+  pvc: apvc
+  capacity: 10Gi
+  ingress: "a"
+app.pv2:
+  pv: bpv
+  pvc: bpvc
+  capacity: 10Gi
+  ingress: "b"
+app.pv3:
+  pv: cpv
+  pvc: cpvc
+  capacity: 10Gi
+  ingress: "c"
     
