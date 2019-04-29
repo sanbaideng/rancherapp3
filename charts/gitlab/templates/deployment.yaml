@@ -23,18 +23,18 @@ spec:
           - containerPort: 443
         volumeMounts: 
         - mountPath: "/etc/gitlab"
-          name: {{ .Values.appconfig }}
+          name: {{ .Values.appconfig.pvc }}
         - mountPath: "/var/log/gitlab"
-          name: {{ .Values.applog }}
+          name: {{ .Values.applog.pvc }}
         - mountPath: "/var/opt/gitlab"
-          name: {{ .Values.appmain }}
+          name: {{ .Values.appmain.pvc }}
       volumes: 
-        - name: {{ .Values.appconfig }}
+        - name: {{ .Values.appconfig.pvc }}
           persistentVolumeClaim:
-            claimName: {{ .Values.appconfig }}
-        - name: {{ .Values.applog }}
+            claimName: {{ .Values.appconfig.pvc }}
+        - name: {{ .Values.applog.pvc }}
           persistentVolumeClaim:
-            claimName: {{ .Values.applog }}
-        - name: {{ .Values.appmain }}
+            claimName: {{ .Values.applog.pvc }}
+        - name: {{ .Values.appmain.pvc }}
           persistentVolumeClaim:
-            claimName: {{ .Values.appmain }}
+            claimName: {{ .Values.appmain.pvc }}
