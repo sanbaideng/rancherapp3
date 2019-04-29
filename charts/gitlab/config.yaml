@@ -1,14 +1,14 @@
-app-main:
+appmain:
   pv: apv
   pvc: apvc
   capacity: 10Gi
   ingress: "gitlab.cecii.cn"
-app-log:
+applog:
   pv: bpv
   pvc: bpvc
   capacity: 10Gi
   ingress: "b"
-app-config:
+appconfig:
   pv: cpv
   pvc: cpvc
   capacity: 10Gi
