@@ -1,19 +1,14 @@
 apiVersion: v1
 kind: Service
-metadata:
+metadata: 
   name: {{ template "gitlab.fullname" . }}
-  labels:
-    app: {{ template "gitlab.name" . }}
-    chart: {{ template "gitlab.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-spec:
-  #type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
-      protocol: TCP
-      name: http
-  selector:
-    app: {{ template "gitlab.name" . }}
-    release: {{ .Release.Name }}
+spec: 
+  selector: 
+    app: {{ template "gitlab.fullname" . }}
+  ports: 
+  - port: 80
+    name: http
+  - port: 443
+    name: https
+  - port: 22
+    name: ssh
