@@ -4,7 +4,7 @@ metadata:
   name: {{ template "gitlab.fullname" . }}
 spec: 
   rules: 
-  - host: gitlab.test 
+  - host: {{ .Values.appmain.ingress }}
     http: 
       paths: 
         - backend: 
