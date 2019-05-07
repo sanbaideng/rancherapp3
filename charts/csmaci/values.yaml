@@ -1,11 +1,11 @@
 
 
 # warProvider
-warProvider: 
-  image: harbor.zh/jeesite-maci/jeesite-maci-war
-  imageTag: v1
-  warPath: /war
 
+webProvider: 
+  image: harbor.zh/jeesite-maci/jeesite-maci-web
+  imageTag: v1
+  webPath: /web
 image: harbor.zh/jeesite-maci/jeesite-maci-tomcat
 imageTag: v2
 hostname: maci.cecii.test
