@@ -1,0 +1,10 @@
+appmain:
+  pv: apv
+  pvc: apvc
+  capacity: 10Gi
+  ingress: "csmaci.cecii.cn"
+appmysql:
+  pv: apv
+  pvc: apvc
+  capacity: 10Gi
+  ingress: ""

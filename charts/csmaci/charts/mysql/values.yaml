@@ -1,15 +1,3 @@
-# mysql持久化存储配置
-size: 5Gi
-cephfs: 
-  monitors: |-
-    - 192.168.1.72:6789
-    - 192.168.1.98:6789
-    - 192.168.1.95:6789
-  path: /jeesite-maci-mysql # cephfs中绝对路径，要求每个helm实例都不同，建议采用 {{ template "mysql.fullname" . }}
-  user: admin
-  secretRef:
-    name: ceph-secret  # ceph集群user对应的密钥的k8s secret对象
-
 # sqlProvider 启动mysql时执行的初始化sql 用来创建数据库，数据库表，导入数据
 sqlProvider: 
   enabled: true
