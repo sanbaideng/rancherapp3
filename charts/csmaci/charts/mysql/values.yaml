@@ -2,7 +2,7 @@
 sqlProvider: 
   enabled: true
   image: harbor.zh/jeesite-maci/jeesite-maci-sql
-  imageTag: v1
+  imageTag: v2
   sqlPath: /sql
 
 # mysql配置

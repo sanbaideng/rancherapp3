@@ -7,7 +7,7 @@ warProvider:
   warPath: /war
 
 image: harbor.zh/jeesite-maci/jeesite-maci-tomcat
-imageTag: v1
+imageTag: v2
 hostname: maci.cecii.test
 
 appmain:
