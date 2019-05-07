@@ -15,8 +15,8 @@ appmain:
   pv: b
   ingress: ""
   capacity: 10Gi
-appmysql:
-  pvc: a
+mysql:
+  pvc: a1
   pv: b
   ingress: ""
   capacity: 10Gi

@@ -49,4 +49,4 @@ spec:
       {{- end }}
       - name: data
         persistentVolumeClaim:
-          claimName: {{ .Values.appmain.pvc }}
+          claimName: {{ .Values.pvc }}

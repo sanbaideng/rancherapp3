@@ -9,9 +9,6 @@ sqlProvider:
 image: mysql
 imageTag: 5.7
 rootPass: root  # root用户密码
-appmain:
-  pvc: a
-  pv: b
-appmysql:
-  pvc: a
-  pv: b
+
+pvc: a
+pv: b

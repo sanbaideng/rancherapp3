@@ -3,7 +3,7 @@ appmain:
   pvc: apvc
   capacity: 10Gi
   ingress: "csmaci.cecii.cn"
-appmysql:
+mysql:
   pv: apv
   pvc: apvc
   capacity: 10Gi
