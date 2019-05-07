@@ -30,7 +30,7 @@ spec:
       - name: {{ template "mysql.fullname" . }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         volumeMounts:
-        - name: {{ .Values.appmain.pvc }}
+        - name: data
           mountPath: /var/lib/mysql
         {{- if .Values.sqlProvider.enabled }}
         - name: sql-script
@@ -47,6 +47,6 @@ spec:
       - name: sql-script
         emptyDir: {}
       {{- end }}
-      - name: {{ .Values.appmain.pvc }}
+      - name: data
         persistentVolumeClaim:
           claimName: {{ .Values.appmain.pvc }}
