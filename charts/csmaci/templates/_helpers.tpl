@@ -15,3 +15,7 @@ If release name contains chart name it will be used as a full name.
 {{- end -}}
 {{- end -}}
 {{- end -}}
+
+{{- define "maci.mysql.fullname" -}}
+{{- printf "%s-%s" .Release.Name "mysql" | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
