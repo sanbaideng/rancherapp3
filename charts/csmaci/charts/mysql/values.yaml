@@ -1,7 +1,7 @@
 # sqlProvider 启动mysql时执行的初始化sql 用来创建数据库，数据库表，导入数据
 sqlProvider: 
   enabled: true
-  image: harbor.zh/jeesite-maci/jeesite-maci-sql
+  image: reg.cecii.cn/pub/jeesite-maci-sql
   imageTag: v2
   sqlPath: /sql
 

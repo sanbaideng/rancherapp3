@@ -3,10 +3,10 @@
 # warProvider
 
 webProvider: 
-  image: harbor.zh/jeesite-maci/jeesite-maci-web
+  image: reg.cecii.cn/pub/jeesite-maci-web
   imageTag: v1
   webPath: /web
-image: harbor.zh/jeesite-maci/jeesite-maci-tomcat
+image: reg.cecii.cn/pub/jeesite-maci-tomcat
 imageTag: v2
 hostname: maci.cecii.test
 
