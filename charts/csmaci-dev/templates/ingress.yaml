@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "maci-dev.fullname" . }}
+  labels:
+    app: {{ template "maci-dev.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+spec: 
+  rules: 
+  - host: {{ .Values.ingress.hosts }} 
+    http: 
+      paths: 
+        - backend: 
+            serviceName: {{ template "maci-dev.fullname" . }}
+            servicePort: 8080

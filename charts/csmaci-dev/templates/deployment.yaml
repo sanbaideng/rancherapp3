@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "maci-dev.fullname" . }}
+  labels:
+    app: {{ template "maci-dev.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "maci-dev.fullname" . }}
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: {{ template "maci-dev.fullname" . }}
+    spec:
+      initContainers:
+      - name: web-provider
+        image: "{{ .Values.webProvider.image }}:{{ .Values.webProvider.imageTag }}"
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: web-package
+          mountPath: {{ .Values.webProvider.webPath | quote }}
+        env:
+        - name: MYSQL_SERVER
+          value: {{ template "maci-dev.mysql.fullname" . }}
+      containers:
+      - name: {{ template "maci-dev.fullname" . }}
+        image:  "{{ .Values.image }}:{{ .Values.imageTag }}"
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: web-package
+          mountPath: /usr/local/tomcat/webapps/
+        ports: 
+        - name: http
+          containerPort: 8080
+      volumes:
+      - name: web-package
+        persistentVolumeClaim:
+          claimName: {{ .Values.appmain.pvc }}
