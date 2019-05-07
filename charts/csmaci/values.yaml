@@ -12,3 +12,11 @@ hostname: maci.cecii.test
 
 appmain:
   pvc: a
+  pv: b
+  ingress: ""
+  capacity: 10Gi
+appmysql:
+  pvc: a
+  pv: b
+  ingress: ""
+  capacity: 10Gi
