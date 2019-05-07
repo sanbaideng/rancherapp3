@@ -8,7 +8,7 @@ metadata:
     release: "{{ .Release.Name }}"
 spec: 
   rules: 
-  - host: {{ .Values.hosts }} 
+  - host: {{ .Values.ingress.hosts }} 
     http: 
       paths: 
         - backend: 
