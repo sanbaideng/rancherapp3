@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "mysql.fullname" . }}
+  labels:
+    app: {{ template "mysql.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "mysql.fullname" . }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ template "mysql.fullname" . }}
+    spec:
+      {{- if .Values.sqlProvider.enabled }}
+      initContainers:
+      - name: sql-provider
+        image: "{{ .Values.sqlProvider.image }}:{{ .Values.sqlProvider.imageTag }}"
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: sql-script
+          mountPath: {{ .Values.sqlProvider.sqlPath | quote }}
+      {{- end }}
+      containers:
+      - name: {{ template "mysql.fullname" . }}
+        image: "{{ .Values.image }}:{{ .Values.imageTag }}"
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysql
+        {{- if .Values.sqlProvider.enabled }}
+        - name: sql-script
+          mountPath: /docker-entrypoint-initdb.d
+        {{- end }}
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: {{ .Values.rootPass | quote }}
+        ports:
+        - name: mysql
+          containerPort: 3306
+      volumes:
+      {{- if .Values.sqlProvider.enabled }}
+      - name: sql-script
+        emptyDir: {}
+      {{- end }}
+      - name: data
+        persistentVolumeClaim:
+          claimName: {{ template "mysql.fullname" . }}
