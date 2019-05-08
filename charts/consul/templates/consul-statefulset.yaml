@@ -16,7 +16,7 @@ spec:
     matchLabels:
       release: {{ .Release.Name | quote }}
       component: "{{ .Release.Name }}-{{ .Values.Component }}"
-      app: "{{ template "consul.fullname" . }}"
+      app: {{ template "consul.fullname" . }}
   template:
     metadata:
       name: "{{ template "consul.fullname" . }}"
@@ -25,6 +25,7 @@ spec:
         release: {{ .Release.Name | quote }}
         chart: {{ template "consul.chart" . }}
         component: "{{ .Release.Name }}-{{ .Values.Component }}"
+        app: {{ template "consul.fullname" . }}
     spec:
       securityContext:
         fsGroup: 1000
