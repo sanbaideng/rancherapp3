@@ -16,6 +16,7 @@ spec:
     matchLabels:
       release: {{ .Release.Name | quote }}
       component: "{{ .Release.Name }}-{{ .Values.Component }}"
+      app: "{{ template "consul.fullname" . }}"
   template:
     metadata:
       name: "{{ template "consul.fullname" . }}"
