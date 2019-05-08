@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "maci.fullname" . }}
+  name: {{ template "maci-dev.fullname" . }}
   labels:
-    app: {{ template "maci.fullname" . }}
+    app: {{ template "maci-dev.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
 spec:
@@ -11,4 +11,4 @@ spec:
   - name: http
     port: 8080
   selector:
-    app: {{ template "maci.fullname" . }}
+    app: {{ template "maci-dev.fullname" . }}
