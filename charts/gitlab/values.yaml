@@ -6,8 +6,8 @@ persistence:
 replicaCount: 1
 
 image:
-  repository: reg.cecii.cn/pub/eclipse
-  tag: latest
+  repository: reg.cecii.cn/pub/gitlab-ce
+  tag: 11.4.7-ce.0
   pullPolicy: IfNotPresent
 
 service:
