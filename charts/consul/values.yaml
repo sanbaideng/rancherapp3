@@ -142,3 +142,23 @@ nodeSelector: {}
 tolerations: []
 persistence:
   name : a
+  
+global: 
+  storageAddr: ""
+  storagePath: ""
+  namespace: "default"
+  releaseName: ""
+  cephUser: "admin"
+  cephSecret: "ceph-secret-client-admin"
+appmain:
+  pv: true
+  pvc: true
+  capacity: 10Gi
+  ingress: "gitlab.cecii.cn"
+  path: ""
+msql:
+  pv: true
+  pvc: true
+  capacity: 10Gi
+  ingress: "gitlab.cecii.cn"
+  path: ""
