@@ -19,8 +19,8 @@ global:
   cephUser: "admin"
   cephSecret: "ceph-secret-client-admin"
 mysql:
-  pv: true
-  pvc: true
+  pv: "true"
+  pvc: "true"
   capacity: 10Gi
   ingress: "gitlab.cecii.cn"
   path: ""
