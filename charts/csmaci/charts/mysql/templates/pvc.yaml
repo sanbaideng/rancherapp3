@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Values.appmain.pvc }}
+  name: {{ .Values.mysql.pvc }}
   namespace: {{ .Values.global.namespace | quote }}
 spec:
   accessModes:
@@ -9,7 +9,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: {{ .Values.appmain.capacity }}
+      storage: {{ .Values.mysql.capacity }}
   selector:
     matchLabels:
-      name: {{ .Values.appmain.pv }}
+      name: {{ .Values.mysql.pv }}
