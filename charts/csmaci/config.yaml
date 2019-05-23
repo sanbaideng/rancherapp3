@@ -1,10 +1,19 @@
+global: 
+  storageAddr: ""
+  storagePath: ""
+  namespace: "default"
+  releaseName: ""
+  cephUser: "admin"
+  cephSecret: "ceph-secret-client-admin"
 appmain:
-  pv: apv
-  pvc: apvc
+  pv: true
+  pvc: true
   capacity: 10Gi
-  ingress: "csmaci.cecii.cn"
-mysql:
-  pv: apv
-  pvc: apvc
+  ingress: "gitlab.cecii.cn"
+  path: ""
+msql:
+  pv: true
+  pvc: true
   capacity: 10Gi
-  ingress: ""
+  ingress: "gitlab.cecii.cn"
+  path: ""
