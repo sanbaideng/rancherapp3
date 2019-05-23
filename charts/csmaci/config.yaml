@@ -11,7 +11,7 @@ appmain:
   capacity: 10Gi
   ingress: "gitlab.cecii.cn"
   path: ""
-msql:
+mysql:
   pv: true
   pvc: true
   capacity: 10Gi

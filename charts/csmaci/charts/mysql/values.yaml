@@ -18,7 +18,7 @@ global:
   releaseName: ""
   cephUser: "admin"
   cephSecret: "ceph-secret-client-admin"
-msql:
+mysql:
   pv: true
   pvc: true
   capacity: 10Gi
