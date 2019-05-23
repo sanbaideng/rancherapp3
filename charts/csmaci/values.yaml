@@ -10,13 +10,3 @@ image: reg.cecii.cn/pub/jeesite-maci-tomcat
 imageTag: v2
 hostname: maci.cecii.test
 
-appmain:
-  pvc: a
-  pv: b
-  ingress: ""
-  capacity: 10Gi
-mysql:
-  pvc: a1
-  pv: b
-  ingress: ""
-  capacity: 10Gi
