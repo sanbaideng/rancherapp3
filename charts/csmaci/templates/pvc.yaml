@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Values.appmain.pvc }}
+  name: {{ .Values.appmain.pvc | quote }}
   namespace: {{ .Values.global.namespace | quote }}
 spec:
   accessModes:
@@ -12,4 +12,4 @@ spec:
       storage: {{ .Values.appmain.capacity }}
   selector:
     matchLabels:
-      name: {{ .Values.appmain.pv }}
+      name: {{ .Values.appmain.pv | quote }}
