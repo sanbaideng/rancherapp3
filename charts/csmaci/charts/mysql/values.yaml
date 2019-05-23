@@ -11,13 +11,6 @@ imageTag: 5.7
 rootPass: root  # root用户密码
 
 
-global: 
-  storageAddr: ""
-  storagePath: ""
-  namespace: "default"
-  releaseName: ""
-  cephUser: "admin"
-  cephSecret: "ceph-secret-client-admin"
 pv: "true1"
 pvc: "true1"
 capacity: 10Gi
