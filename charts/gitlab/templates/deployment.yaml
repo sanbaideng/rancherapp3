@@ -21,6 +21,13 @@ spec:
           - containerPort: 80
           - containerPort: 22
           - containerPort: 443
+        resources:
+          limits:
+            cpu: 600m
+            memory: 3Gi
+          requests:
+            cpu: 300m
+            memory: 2Gi
         volumeMounts: 
         - mountPath: "/etc/gitlab"
           name: {{ .Values.appconfig.pvc }}
