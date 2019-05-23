@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: {{ .Values.mysql.pv }}
+  name: {{ .Values.mysql.pv | quote }}
   labels:
-    name: {{ .Values.mysql.pv }}
+    name: {{ .Values.mysql.pv | quote }}
     namespace: {{ .Values.global.namespace | quote }}
 spec:
   capacity:
