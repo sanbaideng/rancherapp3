@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   cephfs:
     monitors:
-      - {{ .Values.global.storageaddr }}
+      - {{ .Values.global.storageAddr }}
     path: {{ .Values.appmain.path }}
     user: {{ .Values.global.cephUser }}
     secretRef:
