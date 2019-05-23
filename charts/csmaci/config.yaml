@@ -1,19 +1,24 @@
-global: 
-  storageAddr: ""
-  storagePath: ""
-  namespace: "default"
-  releaseName: ""
-  cephUser: "admin"
-  cephSecret: "ceph-secret-client-admin"
 appmain:
-  pv: "true"
-  pvc: "true"
+  pv: maci-1-533
+  pvc: maci-1-533
   capacity: 10Gi
-  ingress: "gitlab.cecii.cn"
-  path: ""
+  ingress: maci-1-533.os.cecii.cn
+  path: /30ac3417-8d60-4397-8b2e-a438faec9b33/74ca65dd-0b69-437e-8a64-ec487e8c136f/maci-1-533
+global:
+  storageAddr: 192.168.1.72:6789,192.168.1.98:6789,192.168.1.95:6789
+  storagePath: ''
+  namespace: '1'
+  releaseName: maci-1-533
+  cephUser: admin
+  cephSecret: ceph-secret-client-admin
 mysql:
-  pv: "true"
-  pvc: "true"
-  capacity: 10Gi
-  ingress: "gitlab.cecii.cn"
-  path: ""
+  pv: maci-1-533-mysql
+  pvc: maci-1-533-mysql
+  capacity: 8Gi
+  ingress: gitlab.cecii.cn
+  path: /30ac3417-8d60-4397-8b2e-a438faec9b33/74ca65dd-0b69-437e-8a64-ec487e8c136f/maci-1-533/mysql
+  subapp: mysql
+persistence: 
+  name: pvc-maci-1-533
+ingress: 
+  hosts: 1-533.os.cecii.cn
