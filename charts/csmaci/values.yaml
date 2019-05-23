@@ -9,7 +9,8 @@ webProvider:
 image: reg.cecii.cn/pub/jeesite-maci-tomcat
 imageTag: v2
 hostname: maci.cecii.test
-
+ingress:
+  host: maci.cecii.test
 global: 
   storageAddr: ""
   storagePath: ""
