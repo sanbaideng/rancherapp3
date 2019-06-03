@@ -8,19 +8,19 @@ global:
 appmain:
   pv: apv
   pvc: apvc
-  capacity: 10Gi
+  capacity: 1Gi
   ingress: "gitlab.cecii.cn"
   path: ""
 applog:
   pv: bpv
   pvc: bpvc
-  capacity: 10Gi
+  capacity: 1Gi
   ingress: "b"
   path: ""
 appconfig:
   pv: cpv
   pvc: cpvc
-  capacity: 10Gi
+  capacity: 1Gi
   ingress: "c"
   path: ""
     

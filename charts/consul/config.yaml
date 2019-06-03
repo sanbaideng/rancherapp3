@@ -8,6 +8,6 @@ global:
 appmain:
   pv: true
   pvc: true
-  capacity: 10Gi
+  capacity: 1Gi
   ingress: "gitlab.cecii.cn"
   path: ""

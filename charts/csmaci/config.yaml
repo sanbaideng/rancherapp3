@@ -8,12 +8,12 @@ global:
 appmain:
   pv: true
   pvc: true
-  capacity: 10Gi
+  capacity: 1Gi
   ingress: "gitlab.cecii.cn"
   path: ""
 mysql:
   pv: ""
   pvc: ""
-  capacity: "8Gi"
+  capacity: "1Gi"
   ingress: ""
   path: ""
