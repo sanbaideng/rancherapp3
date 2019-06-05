@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "inkscape.fullname" . }}
+  labels:
+    app: {{ template "inkscape.name" . }}
+    chart: {{ template "inkscape.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
+      name: http
+  selector:
+    app: {{ template "inkscape.name" . }}
+    release: {{ .Release.Name }}

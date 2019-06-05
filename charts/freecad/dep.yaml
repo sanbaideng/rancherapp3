@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: quarrelsome-lemur-freecad
+  labels:
+    app: freecad
+    chart: freecad-0.1.0
+    release: quarrelsome-lemur
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: freecad
+      release: quarrelsome-lemur
+  template:
+    metadata:
+      labels:
+        app: freecad
+        release: quarrelsome-lemur
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: freecad
+          image: "sanbaideng/freecad:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
+

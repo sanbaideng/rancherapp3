@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: terrific-seastar-c7-nx
+  labels:
+    app: c7-nx
+    chart: c7-nx-0.1.0
+    release: terrific-seastar
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: c7-nx
+      release: terrific-seastar
+  template:
+    metadata:
+      labels:
+        app: c7-nx
+        release: terrific-seastar
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: c7-nx
+          image: "sanbaideng/c7-nx:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
+

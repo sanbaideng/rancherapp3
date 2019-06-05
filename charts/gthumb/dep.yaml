@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: existing-panther-gthumb
+  labels:
+    app: gthumb
+    chart: gthumb-0.1.0
+    release: existing-panther
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gthumb
+      release: existing-panther
+  template:
+    metadata:
+      labels:
+        app: gthumb
+        release: existing-panther
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: gthumb
+          image: "sanbaideng/gthumb:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
+

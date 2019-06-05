@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "blender.fullname" . }}
+  labels:
+    app: {{ template "blender.name" . }}
+    chart: {{ template "blender.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
+      name: http 
+  selector:
+    app: {{ template "blender.name" . }}
+    release: {{ .Release.Name }}

@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: mothy-wolf-evolution
+  labels:
+    app: evolution
+    chart: evolution-0.1.0
+    release: mothy-wolf
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evolution
+      release: mothy-wolf
+  template:
+    metadata:
+      labels:
+        app: evolution
+        release: mothy-wolf
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: evolution
+          image: "sanbaideng/evolution:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
+

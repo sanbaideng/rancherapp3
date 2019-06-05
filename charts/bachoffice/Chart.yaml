@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: bachoffice是一款开源的团队协同系统。集成了项目、任务管理，部门、人员管理，文档、日程管理等多种管理功能，简洁实用、安装方便、配置简单。适合中小企业用于团队协同及项目管理。
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/BACHOFFICE.jpg
+keywords:
+- web
+name: bachoffice
+version: 0.1.0

@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: Blender 是一款开源的跨平台全能三维动画制作软件，提供从建模、动画、材质、渲染、到音频处理、视频剪辑等一系列动画短片制作解决方案
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/blender.jpg
+keywords:
+- gui
+name: blender
+version: 0.1.0

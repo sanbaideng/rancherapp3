@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: riotous-bunny-eclipse
+  labels:
+    app: eclipse
+    chart: eclipse-0.1.0
+    release: riotous-bunny
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eclipse
+      release: riotous-bunny
+  template:
+    metadata:
+      labels:
+        app: eclipse
+        release: riotous-bunny
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: eclipse
+          image: "sanbaideng/eclipse:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
+

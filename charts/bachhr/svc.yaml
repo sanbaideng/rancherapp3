@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: exegetical-gibbon-bachhr
+  labels:
+    app: bachhr
+    chart: bachhr-0.1.0
+    release: exegetical-gibbon
+    heritage: Tiller
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8080
+      protocol: TCP
+      nodePort: 30013
+      name: http
+  selector:
+    app: bachhr
+    release: exegetical-gibbon

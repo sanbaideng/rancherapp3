@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: Rhythmbox是Linux下的音乐播放和管理软件，为Fedora和Ubuntu等Linux发行版默认安装的音乐播放器。它可以播放各种音频格式的音乐，管理收藏的音乐
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/rhythmbox.png
+keywords:
+- gui
+name: rhythmbox
+version: 0.1.0

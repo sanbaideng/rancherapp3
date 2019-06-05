@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: GIMP 是跨平台的图像处理程序。GIMP 是 GNU 图像处理程序(GNU Image Manipulation Program)的缩写。包括几乎所有图象处理所需的功能，号称Linux下的PhotoShop。
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/gimp.jpg
+keywords:
+- gui
+name: gimp
+version: 0.1.0

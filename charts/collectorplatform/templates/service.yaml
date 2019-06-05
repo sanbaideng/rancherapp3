@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "collectorplatform.fullname" . }}
+  labels:
+    app: {{ template "collectorplatform.name" . }}
+    chart: {{ template "collectorplatform.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort}}
+      nodePort: {{ .Values.service.nodePort}}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "collectorplatform.name" . }}
+    release: {{ .Release.Name }}

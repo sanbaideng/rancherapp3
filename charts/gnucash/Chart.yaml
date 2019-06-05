@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: GnuCash 是个人或小型企业财务软件，是免费授权于GNU GPL的软件，它支持多种操作系统，包括GNU/Linux、BSD、Solaris、Mac OS X 以及微软的 Windows。多国语言版，包括简体中文
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/gnucash.jpg
+keywords:
+- gui
+name: gnucash
+version: 0.1.0

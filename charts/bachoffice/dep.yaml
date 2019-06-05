@@ -1,0 +1,42 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: rude-snake-bashoffice
+  labels:
+    app: bashoffice
+    chart: bashoffice-0.1.0
+    release: rude-snake
+    heritage: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bashoffice
+      release: rude-snake
+  template:
+    metadata:
+      labels:
+        app: bashoffice
+        release: rude-snake
+    spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
+      containers:
+        - name: bashoffice
+          image: "sanbaideng/bashoffice:latest"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+            - name: mysql
+              containerPort: 3306
+              protocol: TCP

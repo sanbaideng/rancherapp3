@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "gimp.fullname" . }}
+  labels:
+    app: {{ template "gimp.name" . }}
+    chart: {{ template "gimp.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
+      name: http
+  selector:
+    app: {{ template "gimp.name" . }}
+    release: {{ .Release.Name }}

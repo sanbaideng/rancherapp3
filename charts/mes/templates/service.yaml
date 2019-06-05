@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "mes.fullname" . }}
+  labels:
+    app: {{ template "mes.name" . }}
+    chart: {{ template "mes.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort}}
+      nodePort: {{ .Values.service.nodePort}}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "mes.name" . }}
+    release: {{ .Release.Name }}

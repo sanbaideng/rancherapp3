@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "mingjiang.fullname" . }}
+  labels:
+    app: {{ template "mingjiang.name" . }}
+    chart: {{ template "mingjiang.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort}}
+      nodePort: {{ .Values.service.nodePort}}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "mingjiang.name" . }}
+    release: {{ .Release.Name }}

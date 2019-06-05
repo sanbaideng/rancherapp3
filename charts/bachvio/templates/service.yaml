@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "bachvio.fullname" . }}
+  labels:
+    app: {{ template "bachvio.name" . }}
+    chart: {{ template "bachvio.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort}}
+      nodePort: {{ .Values.service.nodePort}}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "bachvio.name" . }}
+    release: {{ .Release.Name }}

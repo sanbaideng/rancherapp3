@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: gThumb 是一个GNOME桌面环境下的开源图像浏览器，遵循GPL版权协议。原先基于GQView，设计成为一个简洁的界面
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/gear.png
+keywords:
+- gui
+name: gthumb
+version: 0.1.0

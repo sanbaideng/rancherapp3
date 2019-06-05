@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: terrific-seastar-c7-nx
+  labels:
+    app: c7-nx
+    chart: c7-nx-0.1.0
+    release: terrific-seastar
+    heritage: Tiller
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8080
+      protocol: TCP
+      nodePort: 30002
+      name: http
+  selector:
+    app: c7-nx
+    release: terrific-seastar
+

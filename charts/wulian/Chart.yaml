@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: 中电物联泵车远程运维管理平台，通过在泵车上安装GPS终端，可以实时将泵车的油耗、方量、超速、偏航、工况等数据信息发送到平台。平台实时对设备进行管控与数据展示，通过大数据分析对设备故障进行有效预防和精准定位运维，提升运维效率，降低运维成本，提升客户满意度
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/iot.png
+keywords:
+- web
+name: iot
+version: 0.1.0

@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: Mozilla Thunderbird是由Mozilla浏览器的邮件功能部件所改造的邮件工具，使用 XUL 程序界面语言所设计，是专门为搭配 Mozilla Firefox 浏览器使用者所设计的邮件客户端软件，界面设计更简洁、而且免安装。
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/thunderbird.jpg
+keywords:
+- gui
+name: thunderbird
+version: 0.1.0

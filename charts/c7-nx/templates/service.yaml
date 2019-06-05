@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "c7-nx.fullname" . }}
+  labels:
+    app: {{ template "c7-nx.name" . }}
+    chart: {{ template "c7-nx.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort  }}
+      protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
+      name: http
+  selector:
+    app: {{ template "c7-nx.name" . }}
+    release: {{ .Release.Name }}

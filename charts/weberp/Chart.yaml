@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: webERP是一个开源的ERP系统，它支持多公司，多币种，多税种，多库存管理。比较适合中小型的企业
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/webERP.jpg
+keywords:
+- web
+name: weberp
+version: 0.1.0

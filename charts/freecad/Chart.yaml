@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: FreeCAD是一个基于OpenCASCADE的开源CAD/CAE工具。 OpenCASCADE是一套开源的CAD/CAM/CAE几何模型核心，来自法国Matra Datavision公司，是著名的CAD软件EUCLID的开发平台
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/freecad.png
+keywords:
+- gui
+name: freecad
+version: 0.1.0
