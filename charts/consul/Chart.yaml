@@ -8,6 +8,8 @@ description: Highly available and distributed service discovery and key-value st
 icon: http://raw.githubusercontent.com/hashicorp/consul/bce3809dfca37b883828c3715b84143dd71c0f85/website/source/assets/images/favicons/android-chrome-512x512.png
 sources:
 - https://github.com/kelseyhightower/consul-on-kubernetes
+keywords:
+  - 研发工具
 maintainers:
 - name: lachie83
   email: lachlan.evenson@microsoft.com

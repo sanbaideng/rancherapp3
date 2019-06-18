@@ -3,6 +3,6 @@ appVersion: "1.0"
 description: gitlab
 icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gitlab.png
 keywords:
-- gui
+  - 研发工具
 name: gitlab
 version: 0.1.0

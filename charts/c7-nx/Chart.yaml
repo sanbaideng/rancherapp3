@@ -3,6 +3,6 @@ appVersion: "1.0"
 description: Siemens NX 提供了下一代的设计，仿真和制造解决方案，支持公司实现数字孪生的价值。
 icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/nxbig.png
 keywords:
-- gui
+  - 协同设计
 name: c7-nx
 version: 0.1.0

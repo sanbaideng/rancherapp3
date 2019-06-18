@@ -3,4 +3,6 @@ appVersion: "1.0"
 description: 中电互联可视化运营平台
 icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/vio.png
 name: bachvio
+keywords:
+  - 企业管理
 version: 0.1.0
