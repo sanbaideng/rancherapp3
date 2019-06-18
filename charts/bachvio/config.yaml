@@ -6,8 +6,8 @@ global:
   cephUser: "admin"
   cephSecret: "ceph-secret-client-admin"
 appmain:
-  pv: true
-  pvc: true
+  pv: false
+  pvc: false
   capacity: 1Gi
   ingress: "bachvio.cecii.cn"
   path: ""
