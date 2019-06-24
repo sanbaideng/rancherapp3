@@ -18,7 +18,7 @@ metadata:
     {{- end }}
 spec:
   rules:
-    - host: {{ .name }}
+    - host: {{ .Values.appmain.ingress }}
       http:
         paths:
         - path: {{ default "/" .path }}

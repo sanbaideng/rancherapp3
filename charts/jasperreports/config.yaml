@@ -1,0 +1,13 @@
+global: 
+  storageAddr: ""
+  storagePath: ""
+  namespace: "default"
+  releaseName: ""
+  cephUser: "admin"
+  cephSecret: "ceph-secret-client-admin"
+appmain:
+  pv: false
+  pvc: false
+  capacity: 1Gi
+  ingress: "jasperreportsket.cecii.cn"
+  path: ""
