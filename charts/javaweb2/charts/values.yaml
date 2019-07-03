@@ -1,0 +1,47 @@
+# MySQL版本、root密码
+image:
+  repository: mysql
+  tag: 5.7.26
+  port: 3306
+  rootPass: "123456"
+  pullPolicy: IfNotPresent 
+
+# 配置文件 - Linux下忽略大小写配置
+conf: 
+  enabled: true
+  image: reg.cecii.cn/mysql-data/cnf
+  imageTag: v1.0.0
+  filePath: /cnf
+  pullPolicy: Always
+
+# 初始化sql语句 - 创建数据库并初始化
+sql: 
+  enabled: true
+  image: reg.cecii.cn/mysql-data/sql
+  imageTag: v1.0.0
+  filePath: /sql
+  pullPolicy: Always
+
+# 数据持久化 cephfs配置 size 单位G
+persistence: 
+  enabled: true
+  size: 5
+  ceph: 
+    monitors:
+      - 192.168.1.20:6789
+      - 192.168.1.22:6789
+      - 192.168.1.23:6789 
+    user: admin
+    secretRef: 
+      name: ceph-secret-client-admin
+  path: /javaweb2/mysql
+  
+# mnysql服务名
+service:
+  name: javaweb2-mysql
+  type: ClusterIP
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
