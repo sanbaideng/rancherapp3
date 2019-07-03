@@ -17,7 +17,7 @@ metadata:
     {{- end }}
 spec:
   rules:
-  - host: {{ .Values.appmain.ingress }}
+  - host: {{ wp.os.cecii.cn }}
     http:
       paths:
         - path: {{ default "/" .path }}
