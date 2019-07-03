@@ -9,5 +9,5 @@ appmain:
   pv: false
   pvc: false
   capacity: 1Gi
-  ingress: "wordpress.cecii.cn"
+  ingress: "wp.cecii.cn"
   path: ""
