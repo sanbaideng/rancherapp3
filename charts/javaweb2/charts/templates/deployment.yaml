@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mychart.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+    helm.sh/chart: {{ include "mychart.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      {{- if or .Values.conf.enabled .Values.sql.enabled }}
+      initContainers:
+      {{- end -}}
+      {{- if .Values.conf.enabled }}
+      - name: conf
+        image: "{{ .Values.conf.image }}:{{ .Values.conf.imageTag }}"
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: conf
+          mountPath: {{ .Values.conf.filePath | quote }}
+      {{- end -}}
+      {{- if .Values.sql.enabled }}
+      - name: sql
+        image: "{{ .Values.sql.image }}:{{ .Values.sql.imageTag }}"
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: sql
+          mountPath: {{ .Values.sql.filePath | quote }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env: 
+            - name: MYSQL_ROOT_PASSWORD
+              value: {{ .Values.image.rootPass | quote }}
+          ports:
+            - name: mysql
+              containerPort: {{ .Values.image.port }}
+              protocol: TCP
+          {{- if or .Values.conf.enabled (or .Values.sql.enabled .Values.persistence.enabled) }}
+          volumeMounts:
+          {{- end -}}
+          {{- if .Values.conf.enabled }}
+            - name: conf
+              mountPath: "/etc/mysql/conf.d"
+          {{- end -}}
+          {{- if .Values.sql.enabled }}
+            - name: sql
+              mountPath: "/docker-entrypoint-initdb.d"
+          {{- end -}}
+          {{- if .Values.persistence.enabled }}
+            - name: data
+              mountPath: "/var/lib/mysql"
+          {{- end -}}
+      {{- if or .Values.conf.enabled (or .Values.sql.enabled .Values.persistence.enabled) }}
+      volumes: 
+      {{- end -}}
+      {{- if .Values.conf.enabled }}
+        - name: conf
+          emptyDir: {}
+      {{- end -}}
+      {{- if .Values.sql.enabled }}
+        - name: sql
+          emptyDir: {}
+      {{- end -}}
+      {{- if .Values.persistence.enabled }}
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ template "mychart.fullname" . }}
+      {{- end -}}
