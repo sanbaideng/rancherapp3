@@ -16,4 +16,4 @@ spec:
       name: mysql
   selector:
     app.kubernetes.io/name: {{ include "mychart.fullname" . }}
-    app.kubernetes.io/instance: {{ .Release.Name 
+    app.kubernetes.io/instance: {{ .Release.Name }}
