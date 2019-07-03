@@ -1,4 +1,4 @@
-# MySQLç‰ˆæœ¬ã€rootå¯†ç 
+# MySQL°æ±¾¡¢rootÃÜÂë
 image:
   repository: mysql
   tag: 5.7.26
@@ -6,7 +6,7 @@ image:
   rootPass: "123456"
   pullPolicy: IfNotPresent 
 
-# é…ç½®æ–‡ä»¶ - Linuxä¸‹å¿½ç•¥å¤§å°å†™é…ç½®
+# ÅäÖÃÎÄ¼ş - LinuxÏÂºöÂÔ´óĞ¡Ğ´ÅäÖÃ
 conf: 
   enabled: true
   image: reg.cecii.cn/mysql-data/cnf
@@ -14,7 +14,7 @@ conf:
   filePath: /cnf
   pullPolicy: Always
 
-# åˆå§‹åŒ–sqlè¯­å¥ - åˆ›å»ºæ•°æ®åº“å¹¶åˆå§‹åŒ–
+# ³õÊ¼»¯sqlÓï¾ä - ´´½¨Êı¾İ¿â²¢³õÊ¼»¯
 sql: 
   enabled: true
   image: reg.cecii.cn/mysql-data/sql
@@ -22,7 +22,7 @@ sql:
   filePath: /sql
   pullPolicy: Always
 
-# æ•°æ®æŒä¹…åŒ– cephfsé…ç½® size å•ä½G
+# Êı¾İ³Ö¾Ã»¯ cephfsÅäÖÃ size µ¥Î»G
 persistence: 
   enabled: true
   size: 5
@@ -36,7 +36,7 @@ persistence:
       name: ceph-secret-client-admin
   path: /javaweb2/mysql
   
-# mnysqlæœåŠ¡å
+# mnysql·şÎñÃû
 service:
   name: javaweb2-mysql
   type: ClusterIP
