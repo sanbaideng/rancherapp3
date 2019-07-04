@@ -26,9 +26,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}          
-          command: [ "/bin/bash", "-c", "--" ]
-          args: [ "while true; do sleep 30; done;" ]
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           - name: vol
             mountPath: /sys/fs/cgroup
             readOnly: true
