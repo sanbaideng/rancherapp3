@@ -2,9 +2,8 @@ apiVersion: v1
 name: elfinder
 version: 0.1.0
 appVersion: v1.0
-description: 应用描述
+description: elfinder
 keywords: 
   - JavaScript
   - JQuery
-  - 文件管理器
   - spring
