@@ -1,5 +1,4 @@
 {{- if .Values.ingress.enabled }}
-{{- range .Values.ingress.hosts  }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -35,5 +34,4 @@ spec:
     secretName: {{ .tlsSecret }}
 {{- end }}
 ---
-{{- end }}
 {{- end }}
