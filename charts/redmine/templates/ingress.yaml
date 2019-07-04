@@ -1,9 +1,8 @@
 {{- if .Values.ingress.enabled }}
-{{- range .Values.ingress.hosts }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: "{{- printf "%s-%s" .name $.Release.Name | trunc 63 | trimSuffix "-" | replace "." "-" -}}"
+  name: {{ template "redmine.fullname" $ }}
   labels:
     app: {{ template "redmine.fullname" $ }}
     chart: {{ template "redmine.chart" $ }}
@@ -32,5 +31,4 @@ spec:
         - {{ .name }}
 {{- end }}
 ---
-{{- end }}
 {{- end }}
