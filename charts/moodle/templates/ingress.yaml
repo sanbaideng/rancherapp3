@@ -1,9 +1,8 @@
 {{- if .Values.ingress.enabled }}
-{{- range .Values.ingress.hosts }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: "{{- printf "%s-%s" .name $.Release.Name | trunc 63 | trimSuffix "-" -}}"
+  name: {{ template "moodle.fullname" $ }}
   labels:
     app: {{ template "moodle.fullname" $ }}
     chart: {{ template "moodle.chart" $ }}
@@ -32,7 +31,6 @@ spec:
     secretName: {{ .tlsSecret }}
 {{- end }}
 ---
-{{- end }}
 {{- end }}
 
 
