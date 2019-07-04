@@ -30,6 +30,6 @@ spec:
         paths:
           - path: {{ $ingressPath }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ template "fullname" . }}
               servicePort: http
 {{- end }}
