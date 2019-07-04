@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: "{{- printf "%s-%s" .name $.Release.Name | trunc 63 | trimSuffix "-" -}}"
+  name: {{ template "drupal.fullname" $ }}
   labels:
     app: {{ template "drupal.fullname" $ }}
     chart: {{ template "drupal.chart" $ }}
