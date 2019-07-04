@@ -25,7 +25,7 @@ volumes: []
 
 ceph: {}
 
-## mysql ≈‰÷√
+## mysql 
 mysql: 
   image:
     repository: mysql
