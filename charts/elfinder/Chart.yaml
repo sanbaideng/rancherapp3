@@ -1,9 +1,0 @@
-apiVersion: v1
-name: elfinder
-version: 0.1.0
-appVersion: v1.0
-description: elfinder
-keywords: 
-  - JavaScript
-  - JQuery
-  - spring
