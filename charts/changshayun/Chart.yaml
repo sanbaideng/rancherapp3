@@ -3,6 +3,6 @@ appVersion: "1.0"
 description: changshayun
 icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/changshayun.jpg
 keywords:
-- web
-name: 区域协同
+- 区域协同
+name: changshayun
 version: 0.1.0
