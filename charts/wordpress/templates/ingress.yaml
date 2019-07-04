@@ -1,10 +1,9 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "wordpress.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ template "fullname" . }}
   labels:
     app: {{ template "fullname" . }}
     chart: {{ template "wordpress.chart" . }}
