@@ -17,13 +17,13 @@ metadata:
     {{- end }}
 spec:
   rules:
-    - host: {{ .Values.appmain.ingress }}
-      http:
-        paths:
-          - path: {{ default "/" .path }}
-            backend:
-              serviceName: {{ template "drupal.fullname" $ }}
-              servicePort: 80
+  - host: {{ .Values.appmain.ingress }}
+    http:
+      paths:
+        - path: {{ default "/" .path }}
+          backend:
+            serviceName: {{ template "drupal.fullname" $ }}
+            servicePort: 80
 {{- if .tls }}
   tls:
   - hosts:
