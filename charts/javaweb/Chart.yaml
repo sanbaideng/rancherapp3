@@ -2,7 +2,7 @@ apiVersion: v1
 name: javaweb
 version: 0.1.0
 appVersion: v1.0
-description: åº”ç”¨æè¿°
+description: Ó¦ÓÃÃèÊö
 keywords: 
   - JavaWeb
   - JDBC
