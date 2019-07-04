@@ -4,9 +4,9 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name:  {{ template "weberp.fullname" . }}
+  name: {{ template "weberp.fullname" . }}
   labels:
-    app: {{ template "weberp.name" . }}
+    app: {{ template "weberp.fullname" . }}
     chart: {{ template "weberp.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -31,6 +31,6 @@ spec:
         paths:
           - path: {{ $ingressPath }}
             backend:
-              serviceName:  {{ template "weberp.fullname" . }}
+              serviceName: {{ template "weberp.fullname" . }}
               servicePort: http
 {{- end }}
