@@ -6,7 +6,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "wordpress.name" . }}
+    app: {{ template "fullname" . }}
     chart: {{ template "wordpress.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
