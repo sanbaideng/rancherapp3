@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ template "weberp.fullname" . }}
   labels:
-    app: {{ template "weberp.name" . }}
+    app: {{ template "weberp.fullname" . }}
     chart: {{ template "weberp.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -11,12 +11,12 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "weberp.name" . }}
+      app: {{ template "weberp.fullname" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "weberp.name" . }}
+        app: {{ template "weberp.fullname" . }}
         release: {{ .Release.Name }}
     spec:
       volumes:
