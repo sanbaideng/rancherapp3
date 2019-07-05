@@ -1,20 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "bachvio.fullname" . }}
+  name: {{ include "mychart.fullname" . }}
   labels:
-    app: {{ template "bachvio.name" . }}
-    chart: {{ template "bachvio.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+    helm.sh/chart: {{ include "mychart.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
-      nodePort: {{ .Values.service.nodePort }}
+    - port: {{ .Values.image.port }}
+      targetPort: http
       protocol: TCP
       name: http
   selector:
-    app: {{ template "bachvio.name" . }}
-    release: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

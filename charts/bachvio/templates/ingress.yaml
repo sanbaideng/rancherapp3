@@ -1,36 +1,32 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "bachvio.fullname" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
+{{- $fullName := include "mychart.fullname" . -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "bachvio.name" . }}
-    chart: {{ template "bachvio.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-{{- with .Values.ingress.annotations }}
-  annotations:
-{{ toYaml . | indent 4 }}
-{{- end }}
+    app.kubernetes.io/name: {{ include "mychart.fullname" . }}
+    helm.sh/chart: {{ include "mychart.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
 {{- if .Values.ingress.tls }}
   tls:
   {{- range .Values.ingress.tls }}
     - hosts:
       {{- range .hosts }}
-        - {{ . }}
+        - {{ . | quote }}
       {{- end }}
       secretName: {{ .secretName }}
   {{- end }}
 {{- end }}
   rules:
-    - host: {{ .Values.appmain.ingress }}
+  {{- range .Values.ingress.hosts }}
+    - host: {{ .host | quote }}
       http:
         paths:
-          - path: {{ $ingressPath }}
-            backend:
-              serviceName: {{ template "bachvio.fullname" . }}
+          - backend:
+              serviceName: {{ $fullName }}
               servicePort: http
+  {{- end }}
 {{- end }}
