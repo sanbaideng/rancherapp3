@@ -1,7 +1,7 @@
 apiVersion: v1
-name: elfinder2
-version: v1.0
+name: 2
+version: 2
 appVersion: 
-description: elfinder
+description: 2
 keywords: 
-  - elfinder
+  - 2

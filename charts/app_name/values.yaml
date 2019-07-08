@@ -1,7 +1,7 @@
 image:
-  repository: http://elfinder.png
+  repository: 2
   tag: 
-  port: 3002
+  port: 2
   pullPolicy: Always
     
 service:
@@ -19,7 +19,7 @@ fullnameOverride: ""
 replicaCount: 1
 
 volumes: 
-  - mountPath: /home
+  - mountPath: 2
     size: <size/G>
     cephPath: <cephfs-absolute-path>
 
