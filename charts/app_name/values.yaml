@@ -1,7 +1,7 @@
 image:
-  repository: 2
+  repository: 3
   tag: 
-  port: 2
+  port: 3
   pullPolicy: Always
     
 service:
@@ -19,7 +19,7 @@ fullnameOverride: ""
 replicaCount: 1
 
 volumes: 
-  - mountPath: 2
+  - mountPath: 3
     size: <size/G>
     cephPath: <cephfs-absolute-path>
 

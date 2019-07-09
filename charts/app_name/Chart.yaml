@@ -1,7 +1,7 @@
 apiVersion: v1
-name: 2
-version: 2
+name: 3
+version: 3
 appVersion: 
-description: 2
+description: 3
 keywords: 
-  - 2
+  - 3
