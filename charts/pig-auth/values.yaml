@@ -1,0 +1,23 @@
+image:
+  repository: reg.cecii.cn/pig/auth
+  tag: v1.0.0
+  port: 3000
+  pullPolicy: Always
+    
+service:
+  name: pig-auth
+  type: ClusterIP
+
+ingress:
+  enabled: false
+  hosts:
+    - host: null
+  tls: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+volumes: []
+ceph: {}

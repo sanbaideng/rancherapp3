@@ -1,5 +1,6 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "mychart.fullname" . -}}
+{{- $serviceName := .Values.service.name -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -26,7 +27,7 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ $serviceName }}
               servicePort: http
   {{- end }}
 {{- end }}

@@ -1,0 +1,23 @@
+image:
+  repository: reg.cecii.cn/pig/codegen
+  tag: v1.0.0
+  port: 5003
+  pullPolicy: Always
+    
+service:
+  name: pig-codegen
+  type: ClusterIP
+
+ingress:
+  enabled: false
+  hosts:
+    - host: null
+  tls: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+volumes: []
+ceph: {}
