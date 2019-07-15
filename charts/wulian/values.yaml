@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: reg.cecii.cn/pub/wulian
-  tag: v2
+  repository: reg.cecii.cn/pub/lijian
+  tag: v4.0.0
   pullPolicy: IfNotPresent
 
 service:
