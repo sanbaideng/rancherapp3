@@ -1,0 +1,7 @@
+apiVersion: v1
+name: lijian
+version: 0.1.0
+appVersion: v1.0
+description: 应用描述
+keywords: 
+  - gitlab-lijian
