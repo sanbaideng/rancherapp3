@@ -1,5 +1,6 @@
 apiVersion: v1
 name: bachvio
 version: 0.1.0
+description: bachvio可视化运营
 appVersion: v1.0
 description: 应用描述
