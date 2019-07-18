@@ -1,0 +1,7 @@
+apiVersion: v1
+name: bachvio-test
+version: 0.1.0
+appVersion: v1.0
+description: 应用描述
+keywords:
+  - 企业管理

@@ -11,3 +11,6 @@ appmain:
   capacity: 1Gi
   ingress: "a.cecii.cn"
   path: ""
+storage: [a,b,c]
+capacity: [1Gi,2Gi,3Gi]
+ingress: a.os.cecii.cn
