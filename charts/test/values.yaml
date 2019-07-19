@@ -1,7 +1,7 @@
 image:
   repository: reg.cecii.cn
-  tag: v1.0
-  port: 8888
+  tag: v5.0
+  port: 3306
   pullPolicy: Always
     
 service:
@@ -19,7 +19,7 @@ fullnameOverride: ""
 replicaCount: 1
 
 volumes: 
-  - mountPath: http://raw.githubusercontent.com/hashicorp
+  - mountPath: 123456
     size: <size/G>
     cephPath: <cephfs-absolute-path>
 

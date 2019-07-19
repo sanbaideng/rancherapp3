@@ -1,7 +1,7 @@
 apiVersion: v1
-name: install-test
-version: V1.0
+name: test
+version: v1.1
 appVersion: 
-description: 无非
+description: teste
 keywords: 
-  - test
+  - tests
