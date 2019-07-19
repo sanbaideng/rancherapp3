@@ -1,7 +1,7 @@
 image:
   repository: reg.cecii.cn
-  tag: v5.0
-  port: 3306
+  tag: v1.0
+  port: 8000
   pullPolicy: Always
     
 service:
@@ -19,7 +19,7 @@ fullnameOverride: ""
 replicaCount: 1
 
 volumes: 
-  - mountPath: 123456
+  - mountPath: 无
     size: <size/G>
     cephPath: <cephfs-absolute-path>
 
