@@ -174,9 +174,13 @@ spec:
       - name: gossip-key
         secret:
           secretName: {{ template "consul.fullname" . }}-gossip-key
-      - name: {{ .Values.appmain.pvc }}
-        persistentVolumeClaim:
-          claimName: {{ .Values.appmain.pvc }}
+      {{- if .Values.volumes }}      
+        {{- range $index, $volume := .Values.volumes }}
+        - name: v-{{ $index }}
+          persistentVolumeClaim:
+            claimName: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
+        {{- end }}
+      {{- end -}}          
       {{ range .Values.ConsulConfig }}
       - name: userconfig-{{ .name }}
         {{ .type }}:
