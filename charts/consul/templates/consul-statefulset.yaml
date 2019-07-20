@@ -90,8 +90,12 @@ spec:
         - name: DNSPORT
           value: "{{ .Values.ConsulDnsPort }}"
         volumeMounts:
-        - name: "{{ .Values.appmain.pvc }}"
-          mountPath: /var/lib/consul
+      {{- if .Values.volumes }}
+        {{- range $index, $volume := .Values.volumes }}
+        - name: v-{{ $index }}
+          mountPath: {{ $volume.mountPath }}
+        {{- end }}             
+      {{- end }}          
         - name: gossip-key
           mountPath: /etc/consul/secrets
           readOnly: true
