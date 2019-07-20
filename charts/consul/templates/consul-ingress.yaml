@@ -20,12 +20,15 @@ metadata:
   name: "{{ template "consul.fullname" . }}-ui"
 spec:
   rules:
-    - host: {{ .Values.appmain.ingress }}
+
+  {{- range .Values.ingress.hosts }}
+    - host: {{ .host | quote }}  
       http:
         paths:
           - backend:
               serviceName: {{ $serviceName }}
               servicePort: {{ $servicePort }}
+  {{- end }}
   {{- if .Values.ingress.tls }}
   tls:
 {{ toYaml .Values.ingress.tls | indent 4 }}
