@@ -176,9 +176,9 @@ spec:
           secretName: {{ template "consul.fullname" . }}-gossip-key
       {{- if .Values.volumes }}      
         {{- range $index, $volume := .Values.volumes }}
-        - name: v-{{ $index }}
-          persistentVolumeClaim:
-            claimName: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
+      - name: v-{{ $index }}
+        persistentVolumeClaim:
+          claimName: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
         {{- end }}
       {{- end -}}          
       {{ range .Values.ConsulConfig }}
