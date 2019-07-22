@@ -14,8 +14,6 @@ spec:
     - ReadWriteOnce
   capacity:
     storage: {{ $volume.size }}Gi
-  cephfs:
-    path: {{ $volume.cephPath }}
 {{- toYaml $.Values.ceph | nindent 4 }}
 ---
 {{ end }}
