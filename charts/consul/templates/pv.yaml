@@ -13,17 +13,16 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: {{ $volume.size }}Gi
+    storage: {{ $volume.size }}
   cephfs:
-    path: {{ $volume.cephPath }}
-    monitors: 
-      -  192.168.1.68:6789
-    user: admin
+    monitors:
+      - {{ .Values.global.storageAddr }}
+    path: {{ .Values.appmain.path }}
+    user: {{ .Values.global.cephUser }}
     secretRef:
-      name: ceph-secret-client-admin
+      name: {{ .Values.global.cephSecret }}
       namespace: default
     readOnly: false
-{{- toYaml $.Values.ceph | nindent 4 }}
----
+  persistentVolumeReclaimPolicy: Retain
 {{ end }}
 {{ end }}

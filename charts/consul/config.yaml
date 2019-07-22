@@ -1,7 +1,7 @@
 ingress:
   enabled: true
   hosts:
-    - host: elfinder.os.cecii.cn
+    - host: consul.os.cecii.cn
   tls: []
 
 replicaCount: 1
@@ -9,4 +9,3 @@ replicaCount: 1
 volumes: 
   - mountPath: /var/lib/consul
     size: 1Gi
-    cephPath: <cephfs-absolute-path>
