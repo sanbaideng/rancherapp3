@@ -1,13 +1,7 @@
-global: 
-  storageAddr: ""
-  storagePath: ""
-  namespace: "default"
-  releaseName: ""
-  cephUser: "admin"
-  cephSecret: "ceph-secret-client-admin"
-appmain:
-  pv: false
-  pvc: false
-  capacity: 1Gi
-  ingress: "a.cecii.cn"
-  path: ""
+ingress:
+  enabled: true
+  hosts:
+    - host: eclipse.os.cecii.cn
+  tls: []
+
+replicaCount: 1
