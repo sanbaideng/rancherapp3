@@ -14,6 +14,15 @@ spec:
     - ReadWriteOnce
   capacity:
     storage: {{ $volume.size }}Gi
+  cephfs:
+    path: {{ $volume.cephPath }}
+    monitors: 
+      -  192.168.1.68:6789
+    user: admin
+    secretRef:
+      name: ceph-secret-client-admin
+      namespace: default
+    readOnly: false
 {{- toYaml $.Values.ceph | nindent 4 }}
 ---
 {{ end }}
