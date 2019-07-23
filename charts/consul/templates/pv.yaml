@@ -17,7 +17,7 @@ spec:
   cephfs:
     monitors:
       - {{ .Values.global.storageAddr }}
-    path: {{ .Values.appmain.path }}
+    path: {{ $volume.cephPath }}
     user: {{ .Values.global.cephUser }}
     secretRef:
       name: {{ .Values.global.cephSecret }}
