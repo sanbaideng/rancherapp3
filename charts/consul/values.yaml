@@ -143,5 +143,10 @@ tolerations: []
 persistence:
   name : a
 
-global: {cephSecret: ceph-secret-client-admin, cephUserName: admin, namespace: a,
-  releaseName: consul-1-653, storageAddr: '192.168.1.68:6789', storagePath: ''}
+global: 
+  cephSecret: ceph-secret-client-admin
+  cephUserName: admin
+  namespace: a
+  releaseName: consul-1-653
+  storageAddr: '192.168.1.68:6789'
+  storagePath: ''
