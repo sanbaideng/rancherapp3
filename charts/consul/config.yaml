@@ -9,3 +9,4 @@ replicaCount: 1
 volumes: 
   - mountPath: /var/lib/consul
     size: 1Gi
+    cephPath: a
