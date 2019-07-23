@@ -1,4 +1,7 @@
 {{ if .Values.volumes }}
+{{- $storageAddr := .Values.global.storageAddr -}}
+{{- $cephUser := .Values.global.cephUser -}}
+{{- $cephSecret := .Values.global.cephSecret -}}
 {{- range $index, $volume := .Values.volumes -}}
 apiVersion: v1
 kind: PersistentVolume
@@ -16,11 +19,11 @@ spec:
     storage: {{ $volume.size }}
   cephfs:
     monitors:
-      - {{ .Values.global.storageAddr }}
+      - {{ $storageAddr }}
     path: {{ $volume.cephPath }}
-    user: {{ .Values.global.cephUser }}
+    user: {{ $cephUser }}
     secretRef:
-      name: {{ .Values.global.cephSecret }}
+      name: {{ $cephSecret }}
       namespace: default
     readOnly: false
   persistentVolumeReclaimPolicy: Retain
