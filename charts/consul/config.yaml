@@ -1,11 +1,17 @@
+#域名
 ingress:
   enabled: true
   hosts:
     - host: consul.os.cecii.cn
   tls: []
 
+#副本数
 replicaCount: 1
 
+#应用名称，不填则为默认
+appName: ''
+
+#存储
 volumes: 
   - mountPath: /var/lib/consul
     size: 1Gi
