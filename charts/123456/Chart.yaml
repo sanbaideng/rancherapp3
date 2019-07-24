@@ -1,0 +1,7 @@
+apiVersion: v1
+name: 123456
+version: 1.2
+appVersion: 
+description: 212
+keywords: 
+  - 123
