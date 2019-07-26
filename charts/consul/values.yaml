@@ -117,7 +117,7 @@ ingress:
   enabled: true
   annotations: {}
   labels: {}
-  hosts: consul-ui3.myexample.com
+  host: ${host}
   tls: {}
 
 ## Useful when ACLs are enabled
@@ -146,4 +146,4 @@ persistence:
 volumes: 
   - mountPath: /var/lib/consul
     size: 1Gi
-    cephPath: a
+    cephPath: ${cephpath}/default

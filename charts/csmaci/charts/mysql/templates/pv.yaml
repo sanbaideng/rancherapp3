@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: {{ .Values.pv | quote }}
+  name: {{ include "mychart.fullname" $ }}-mysql
   labels:
-    name: {{ .Values.pv | quote }}
+    name: {{ include "mychart.fullname" $ }}-mysql
     namespace: {{ .Values.global.namespace | quote }}
 spec:
   capacity:
@@ -13,7 +13,7 @@ spec:
   cephfs:
     monitors:
       - {{ .Values.global.storageAddr }}
-    path: {{ .Values.path }}
+    path: {{ .Values.cephpath }}
     user: {{ .Values.global.cephUser }}
     secretRef:
       name: {{ .Values.global.cephSecret }}

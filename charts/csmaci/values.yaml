@@ -10,23 +10,22 @@ image: reg.cecii.cn/pub/jeesite-maci-tomcat
 imageTag: v2
 hostname: maci.cecii.test
 ingress:
-  host: maci.cecii.test
-global: 
-  storageAddr: ""
-  storagePath: ""
-  namespace: "default"
-  releaseName: ""
-  cephUser: "admin"
-  cephSecret: "ceph-secret-client-admin"
-appmain:
-  pv: "true"
-  pvc: "true"
-  capacity: 10Gi
-  ingress: "gitlab.cecii.cn"
-  path: ""
+  host: ${host}
+
 mysql:
-  pv: "true"
-  pvc: "true"
+  # sqlProvider 启动mysql时执行的初始化sql 用来创建数据库，数据库表，导入数据
+  sqlProvider: 
+    enabled: true
+    image: reg.cecii.cn/pub/jeesite-maci-sql
+    imageTag: v2
+    sqlPath: /sql
+  
+  # mysql配置
+  image: mysql
+  imageTag: 5.7
+  rootPass: root  # root用户密码
+  
+
   capacity: 10Gi
   ingress: "gitlab.cecii.cn"
-  path: ""
+  cephpath: ${cephpath}/default

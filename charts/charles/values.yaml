@@ -10,6 +10,14 @@ service:
 ingress:
   enabled: true
   hosts:
+volumes: 
+  - mountPath: /var/lib/consul
+    size: 1Gi
+    cephPath: a
+volumes: 
+  - mountPath: /var/lib/consul
+    size: 1Gi
+    cephPath: a
     - host: elfinder.os.cecii.cn
   tls: []
 

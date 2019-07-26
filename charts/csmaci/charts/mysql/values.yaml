@@ -15,4 +15,4 @@ pv: "true1"
 pvc: "true1"
 capacity: 10Gi
 ingress: "gitlab.cecii.cn"
-path: ""
+cephpath: ""
