@@ -21,8 +21,7 @@ ingress:
   enabled: true
   annotations: {}
   path: /
-  hosts:
-    - mailhog.example.com
+  host: ${host}
   tls: []
   #  - hosts:
   #      - mailhog.example.com

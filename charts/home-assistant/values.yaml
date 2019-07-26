@@ -31,8 +31,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
-  hosts:
-    - home-assistant.local
+  host: ${host}
   tls: []
   #  - secretName: home-assistant-tls
   #    hosts:

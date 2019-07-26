@@ -17,10 +17,10 @@ metadata:
     {{- end }}
 spec:
   rules:
-  - host: {{ .Values.appmain.ingress }}
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
-      - path: {{ default "/" .path }}
+      - path: {{ .Values.ingress.path }}
         backend:
           serviceName: {{ template "jasperreports.fullname" $ }}
           servicePort: http

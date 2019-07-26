@@ -118,8 +118,7 @@ ingress:
     # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     # nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
   path: /
-  hosts:
-    - chart-example.local
+  host: ${host}
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

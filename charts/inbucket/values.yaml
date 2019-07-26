@@ -52,8 +52,7 @@ ingress:
   enabled: true
   annotations: {}
   path: /
-  hosts:
-    - inbucket.example.com
+  host: ${host}
   tls: []
   #  - hosts:
   #      - inbucket.example.com

@@ -1,15 +1,24 @@
+{{ if .Values.volumes }}
+{{- range $index, $volume := .Values.volumes -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Values.appmain.pvc | quote }}
-  namespace: {{ .Values.global.namespace | quote }}
+  name: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
+  labels:
+    app.kubernetes.io/name: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
+    helm.sh/chart: {{ include "mychart.chart" $ }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+    app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""
   resources:
     requests:
-      storage: {{ .Values.appmain.capacity }}
+      storage: {{ $volume.size }}
   selector:
-    matchLabels:
-      name: {{ .Values.appmain.pv | quote }}
+      matchLabels:
+        app.kubernetes.io/name: {{ include "mychart.fullname" $ }}-pv-{{ $index }}
+  volumeName: {{ include "mychart.fullname" $ }}-pv-{{ $index }}
+---
+{{ end }}
+{{ end }}

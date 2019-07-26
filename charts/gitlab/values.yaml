@@ -22,7 +22,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
-  hosts: eclipse1.myexample.com
+  hosts: ${host}
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -46,18 +46,13 @@ tolerations: []
 
 affinity: {}
 
-appmain:
-  pv: apv
-  pvc: apvc
-  capacity: 10Gi
-  ingress: "gitlab.cecii.cn"
-applog:
-  pv: bpv
-  pvc: bpvc
-  capacity: 10Gi
-  ingress: "b"
-appconfig:
-  pv: cpv
-  pvc: cpvc
-  capacity: 10Gi
-  ingress: "c"
+volumes: 
+  - mountPath: /var/lib/consul
+    size: 1Gi
+    cephPath: ${cephpath}/appmain
+  - mountPath: /var/lib/consul
+    size: 1Gi
+    cephPath: ${cephpath}/applog
+  - mountPath: /var/lib/consul
+    size: 1Gi
+    cephPath: ${cephpath}/appconfig
