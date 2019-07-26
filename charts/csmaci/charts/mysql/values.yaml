@@ -11,8 +11,6 @@ imageTag: 5.7
 rootPass: root  # root用户密码
 
 
-pv: "true1"
-pvc: "true1"
 capacity: 10Gi
 ingress: "gitlab.cecii.cn"
 cephpath: ""

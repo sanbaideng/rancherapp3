@@ -49,4 +49,4 @@ spec:
       {{- end }}
       - name: data
         persistentVolumeClaim:
-          claimName: {{ .Values.pvc }}
+          claimName: {{ include "mychart.fullname" $ }}-mysql
