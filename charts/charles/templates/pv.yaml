@@ -1,4 +1,7 @@
 {{ if .Values.volumes }}
+{{- $storageAddr := .Values.global.storageAddr -}}
+{{- $cephUser := .Values.global.cephUser -}}
+{{- $cephSecret := .Values.global.cephSecret -}}
 {{- range $index, $volume := .Values.volumes -}}
 apiVersion: v1
 kind: PersistentVolume
