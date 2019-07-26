@@ -48,4 +48,4 @@ spec:
       volumes:
       - name: web-package
         persistentVolumeClaim:
-          claimName: {{ .Values.appmain.pvc }}
+          claimName: {{ include "mychart.fullname" $ }}
