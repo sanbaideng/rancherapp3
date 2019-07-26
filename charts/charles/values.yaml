@@ -1,7 +1,7 @@
 image:
   repository: reg.cecii.cn
   tag: 072410
-  port: s
+  port: 8080
   pullPolicy: Always
     
 service:
