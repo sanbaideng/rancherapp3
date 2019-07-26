@@ -16,7 +16,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: {{ $volume.size }}Gi
+    storage: {{ $volume.size }}
   cephfs:
     monitors:
       - {{ $storageAddr }}
