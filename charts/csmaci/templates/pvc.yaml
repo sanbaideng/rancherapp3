@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Values.appmain.pvc | quote }}
+  name: {{ include "mychart.fullname" $ }}
   namespace: {{ .Values.global.namespace | quote }}
 spec:
   accessModes:
@@ -9,7 +9,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: {{ .Values.appmain.capacity }}
+      storage: {{ .Values.capacity }}
   selector:
     matchLabels:
-      name: {{ .Values.appmain.pv | quote }}
+      name: {{ include "mychart.fullname" $ }}

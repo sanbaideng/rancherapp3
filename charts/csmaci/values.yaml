@@ -11,7 +11,8 @@ imageTag: v2
 hostname: maci.cecii.test
 ingress:
   host: ${host}
-
+capacity: 1Gi
+cephpath: ${cephpath}/default
 mysql:
   # sqlProvider 启动mysql时执行的初始化sql 用来创建数据库，数据库表，导入数据
   sqlProvider: 
