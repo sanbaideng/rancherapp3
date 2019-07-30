@@ -13,7 +13,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: {{ $volume.size }}Gi
+    storage: {{ $volume.size }}
   cephfs:
     path: {{ $volume.cephPath }}
 {{- toYaml $.Values.ceph | nindent 4 }}
