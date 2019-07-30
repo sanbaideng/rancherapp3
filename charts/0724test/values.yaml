@@ -1,6 +1,6 @@
 image:
   repository: reg.cecii.cn/pub/wulian
-  tag: V2
+  tag: v2
   port: 8080
   pullPolicy: Always
     
