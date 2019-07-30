@@ -26,8 +26,7 @@ ingress:
     # ingress.kubernetes.io/force-ssl-redirect: "true"
   labels: []
     # traffic-type: external
-  hosts:
-   - composer.local
+  host: ${host}
   tls: []
    # - secretName: composer-cert
    #   hosts:

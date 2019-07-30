@@ -126,8 +126,7 @@ ingress:
   ## superset Ingress hostnames
   ## Must be provided if Ingress is enabled
   ##
-  hosts:
-    - superset.domain.com
+  host: ${host}
 
   ## superset Ingress path
   ## Optional, allows specifying paths for more flexibility

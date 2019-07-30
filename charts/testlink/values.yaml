@@ -82,17 +82,6 @@ externalDatabase:
 ## ref: https://github.com/bitnami/bitnami-docker-testlink#smtp-configuration
 ##
 smtpEnable: false
-# smtpHost:
-# smtpPort:
-# smtpUser:
-# smtpPassword:
-# smtpConnectionMode:
-
-##
-## MariaDB chart configuration
-##
-## https://github.com/helm/charts/blob/master/stable/mariadb/values.yaml
-##
 mariadb:
   ## Whether to deploy a mariadb server to satisfy the applications database requirements. To use an external database set this to false and configure the externalDatabase parameters
   enabled: true
@@ -106,30 +95,10 @@ mariadb:
   db:
     name: bitnami_testlink
     user: bn_testlink
-    ## If the password is not specified, mariadb will generates a random password
-    ##
-    # password:
-
-  ## MariaDB admin password
-  ## ref: https://github.com/bitnami/bitnami-docker-mariadb/blob/master/README.md#setting-the-root-password-on-first-run
-  ##
-  # rootUser:
-  #   password:
-
-  ## Enable persistence using Persistent Volume Claims
-  ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
-  ##
+  
   master:
     persistence:
       enabled: false
-      ## mariadb data Persistent Volume Storage Class
-      ## If defined, storageClassName: <storageClass>
-      ## If set to "-", storageClassName: "", which disables dynamic provisioning
-      ## If undefined (the default) or set to null, no storageClassName spec is
-      ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
-      ##   GKE, AWS & OpenStack)
-      ##
-      # storageClass: "-"
       accessMode: ReadWriteOnce
       size: 8Gi
 
@@ -161,14 +130,6 @@ service:
 persistence:
   enabled: false
   testlink:
-    ## testlink data Persistent Volume Storage Class
-    ## If defined, storageClassName: <storageClass>
-    ## If set to "-", storageClassName: "", which disables dynamic provisioning
-    ## If undefined (the default) or set to null, no storageClassName spec is
-    ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
-    ##   GKE, AWS & OpenStack)
-    ##
-    # storageClass: "-"
     accessMode: ReadWriteOnce
     size: 8Gi
 
@@ -195,21 +156,9 @@ ingress:
 
   ## Set this to true in order to add the corresponding annotations for cert-manager
   certManager: false
-
-  ## Ingress annotations done as key:value pairs
-  ## For a full list of possible ingress annotations, please see
-  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/annotations.md
-  ##
-  ## If tls is set to true, annotation ingress.kubernetes.io/secure-backends: "true" will automatically be set
-  ## If certManager is set to true, annotation kubernetes.io/tls-acme: "true" will automatically be set
   annotations:
-  #  kubernetes.io/ingress.class: nginx
-
-  ## The list of hostnames to be covered with this ingress record.
-  ## Most likely this will be just one host, but in the event more hosts are needed, this is an array
-  hosts:
-  - name: testlink.local
-    path: /
+  host: ${host}
+  path: /
 
     ## Set this to true in order to enable TLS on the ingress record
     tls: false
