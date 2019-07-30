@@ -1,0 +1,8 @@
+apiVersion: v1
+name: 0730test
+version: 1.0
+appVersion: 
+description: 0730test
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564474449482&di=8b7ffca99faa698f8124ab483ae853c0&imgtype=0&src=http%3A%2F%2Fpic27.nipic.com%2F20130401%2F12261248_082949230177_2.jpg
+keywords: 
+  - test
