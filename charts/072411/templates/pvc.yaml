@@ -14,7 +14,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ $volume.size }}Gi
+      storage: {{ $volume.size }}
   selector:
       matchLabels:
         app.kubernetes.io/name: {{ include "mychart.fullname" $ }}-pv-{{ $index }}
