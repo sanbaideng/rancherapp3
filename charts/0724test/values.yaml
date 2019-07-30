@@ -1,7 +1,7 @@
 image:
-  repository: reg.cecii.cn
-  tag: V1.0
-  port: s
+  repository: reg.cecii.cn/pub/wulian
+  tag: V2
+  port: 8080
   pullPolicy: Always
     
 service:
@@ -9,8 +9,7 @@ service:
 
 ingress:
   enabled: true
-  hosts:
-    - host: elfinder.os.cecii.cn
+  host: ${host}
   tls: []
 
 nameOverride: ""
