@@ -1,0 +1,8 @@
+apiVersion: v1
+name: ylocal002
+version: v2
+appVersion: 
+description: 测试应用
+icon: http://ww1.sinaimg.cn/large/7cca91e5gy1g5it5ytlnpj205e04vjrb.jpg
+keywords: 
+  - 其他
