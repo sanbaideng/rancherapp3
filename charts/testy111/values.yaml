@@ -19,6 +19,6 @@ fullnameOverride: ""
 replicaCount: 1
 
 volumes: 
-  - mountPath: 
+  - mountPath: /home
     size: 1Gi
     cephPath: ${cephpath}/default
