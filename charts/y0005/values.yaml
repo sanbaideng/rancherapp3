@@ -1,0 +1,24 @@
+image:
+  repository: reg.cecii.cn/elfinder06/y0001
+  tag: v1
+  port: 8080
+  pullPolicy: Always
+    
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  hosts:
+    - host: ${host}
+  tls: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+volumes: 
+  - mountPath: 
+    size: 1Gi
+    cephPath: ${cephpath}/default
