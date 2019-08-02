@@ -4,5 +4,6 @@ description: IE-MES制造执行系统是采用Java平台开发的开源企业生
 icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/MES制造执行系统.jpg
 keywords:
 - web
+- 协同制造
 name: mes
 version: 0.1.0

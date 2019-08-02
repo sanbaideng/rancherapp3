@@ -1,7 +1,0 @@
-apiVersion: v1
-name: hellodevops5
-version: hellodevops5:v5.0
-appVersion: 
-description: hellodevops5
-keywords: 
-  - devops
