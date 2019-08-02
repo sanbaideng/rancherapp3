@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: reg.cecii.cn/pub/changshayun
-  tag: v1
+  tag: v2
   pullPolicy: IfNotPresent
 
 service:
