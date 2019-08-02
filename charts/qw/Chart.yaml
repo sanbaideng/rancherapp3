@@ -1,8 +1,0 @@
-apiVersion: v1
-name: qw
-version: V1.0
-appVersion: 
-description: qw测试应用
-icon: /home
-keywords: 
-  - test
