@@ -8,6 +8,7 @@ description: Open-source web application written in Go and React.js that provide
 keywords:
 - 其他
 home: https://www.influxdata.com/time-series-platform/chronograf/
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gear.png
 maintainers:
 - name: jackzampolin
   email: jack@influxdb.com
