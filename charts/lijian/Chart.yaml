@@ -3,5 +3,6 @@ name: lijian
 version: 0.1.0
 appVersion: v1.0
 description: 应用描述
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gear.png
 keywords: 
-  - gitlab-lijian
+  - 其他
