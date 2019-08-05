@@ -1,0 +1,8 @@
+apiVersion: v1
+name: 地图
+version: 1.0
+appVersion: 
+description: 位置搜索
+icon: https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1564982736&di=42425254c807e3fb85f0b1e01e0a695e&src=http://ku.90sjimg.com/element_origin_min_pic/17/09/27/0639ec794377d9f8ce28eac1993775ac.jpg
+keywords: 
+  - 85test
