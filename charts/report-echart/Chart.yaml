@@ -1,0 +1,11 @@
+apiVersion: v1
+name: report-echart
+version: 1.0
+appVersion: 1.0.0
+icon: https://www.echartsjs.com/images/logo.png
+keywords: 
+  - echarts
+  - js
+  - report
+  - java
+description: 本一个供Java开发使用的ECharts的报表工具开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。目前已经包含Bar-柱状图(bar.html)，Line-折线图(line.html)，Pie-饼图(pie.html)，Scatter-散点图(scatter.html)，Gauge-仪表盘(guage.html)，Funnel-漏斗图(funnel.html)等图表。
