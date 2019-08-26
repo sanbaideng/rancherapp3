@@ -2,7 +2,7 @@ apiVersion: v1
 name: monitor
 version: 0.1.0
 appVersion: v1.0.0
-description: åº”ç”¨æè¿°
-icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gear.png
+description: Ó¦ÓÃÃèÊö
 keywords: 
-  - ååŒè®¾è®¡
+  - pig
+  - monitor

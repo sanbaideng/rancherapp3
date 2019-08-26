@@ -1,8 +1,7 @@
 apiVersion: v1
-name: gateway
+name: redis
 version: 0.1.0
-appVersion: v1.0.0
+appVersion: v5.0.5
 description: Ó¦ÓÃÃèÊö
 keywords: 
-  - pig
-  - gateway
+  - redis

@@ -11,7 +11,7 @@ service:
 ingress:
   enabled: false
   hosts:
-    - host: ${host}
+    - host: null
   tls: []
 
 nameOverride: ""

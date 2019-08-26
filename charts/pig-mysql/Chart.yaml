@@ -1,8 +1,7 @@
 apiVersion: v1
-name: gateway
+name: mysql
 version: 0.1.0
-appVersion: v1.0.0
+appVersion: v5.7.26
 description: ”¶”√√Ë ˆ
 keywords: 
-  - pig
-  - gateway
+  - mysql
