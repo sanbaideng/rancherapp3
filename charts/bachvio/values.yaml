@@ -9,15 +9,10 @@ service:
 
 ingress:
   enabled: true
-  hosts:
-    - host: bachvio.os.cecii.cn
+  host: bachvio.os.cecii.cn
   tls: []
 
 nameOverride: ""
 fullnameOverride: ""
 
 replicaCount: 1
-
-volumes: []
-
-ceph: {}
