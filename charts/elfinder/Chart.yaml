@@ -1,7 +1,10 @@
 apiVersion: v1
 name: elfinder
-version: 1.0
-appVersion: 
-icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564734441662&di=bea9c0e2759c50a0ebc99a8633ef4b73&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fdesign%2F01%2F54%2F03%2F90%2F5930149711114.png
+version: 0.1.0
+appVersion: v1.0
+description: 应用描述
 keywords: 
-  - 
+  - JavaScript
+  - JQuery
+  - 文件管理器
+  - spring
