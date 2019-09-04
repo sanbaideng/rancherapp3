@@ -20,10 +20,6 @@ service:
 ingress:
   enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-    # certmanager.k8s.io/cluster-issuer: self-signed
-    # ingress.kubernetes.io/force-ssl-redirect: "true"
   labels: []
     # traffic-type: external
   host: ${host}
@@ -59,15 +55,6 @@ persistence:
   accessMode: ReadWriteOnce
   size: 8Gi
   storageClass: ~  # set your PV storage class here
-  ## A manually managed Persistent Volume and Claim
-  ## Requires persistence.enabled: true
-  ## If defined, PVC must be created manually before volume will be bound
-  # existingClaim:
-
-
-## Application settings
-## For more details see Satis documentaion
-## https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md#setup
 satisfy:
   repoName: myrepo
   homepage: http://composer.local  # set it to FQDN of your ingress
