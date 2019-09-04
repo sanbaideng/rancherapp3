@@ -10,8 +10,6 @@ serviceAccount:
 
 replicas: 1
 
-## See `kubectl explain deployment.spec.strategy` for more
-## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy:
   type: RollingUpdate
   rollingUpdate: null
@@ -29,22 +27,10 @@ livenessProbe:
   timeoutSeconds: 30
   failureThreshold: 10
 
-## Use an alternate scheduler, e.g. "stork".
-## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
-##
-# schedulerName: "default-scheduler"
-
 image:
   repository: grafana/grafana
   tag: 6.2.4
   pullPolicy: IfNotPresent
-
-  ## Optionally specify an array of imagePullSecrets.
-  ## Secrets must be manually created in the namespace.
-  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-  ##
-  # pullSecrets:
-  #   - myRegistrKeySecretName
 
 testFramework:
   image: "dduportal/bats"
@@ -63,28 +49,11 @@ extraConfigmapMounts: []
 
 
 extraEmptyDirMounts: []
-  # - name: provisioning-notifiers
-  #   mountPath: /etc/grafana/provisioning/notifiers
-
-
-## Assign a PriorityClassName to pods if set
-# priorityClassName:
-
 downloadDashboardsImage:
   repository: appropriate/curl
   tag: latest
   pullPolicy: IfNotPresent
 
-## Pod Annotations
-# podAnnotations: {}
-
-## Deployment annotations
-# annotations: {}
-
-## Expose the grafana service to be accessed from outside the cluster (LoadBalancer service).
-## or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
-## ref: http://kubernetes.io/docs/user-guide/services/
-##
 service:
   type: ClusterIP
   port: 80
@@ -114,9 +83,6 @@ resources: {}
 #    cpu: 100m
 #    memory: 128Mi
 
-## Node labels for pod assignment
-## ref: https://kubernetes.io/docs/user-guide/node-selection/
-#
 nodeSelector: {}
 
 tolerations: []
@@ -125,7 +91,6 @@ affinity: {}
 
 extraInitContainers: []
 
-## Enable an Specify container in extraContainers. This is meant to allow adding an authentication proxy to a grafana pod
 extraContainers: |
 
 persistence:
@@ -139,9 +104,6 @@ persistence:
   # existingClaim:
 
 initChownData:
-  ## If false, data ownership will not be reset at startup
-  ## This allows the prometheus-server to be run with an arbitrary user
-  ##
   enabled: true
 
   ## initChownData container image
@@ -151,9 +113,6 @@ initChownData:
     tag: "1.30"
     pullPolicy: IfNotPresent
 
-  ## initChownData resource requests and limits
-  ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
-  ##
   resources: {}
   #  limits:
   #    cpu: 100m
@@ -163,11 +122,7 @@ initChownData:
   #    memory: 128Mi
 
 
-# Administrator credentials when not using an existing secret (see below)
 adminUser: admin
-# adminPassword: strongpassword
-
-# Use an existing secret for the admin user.
 admin:
   existingSecret: ""
   userKey: admin-user
@@ -187,27 +142,10 @@ datasources: {}
 notifiers: {}
 
 dashboardProviders: {}
-#  dashboardproviders.yaml:
-#    apiVersion: 1
-#    providers:
-#    - name: 'default'
-#      orgId: 1
-#      folder: ''
-#      type: file
-#      disableDeletion: false
-#      editable: true
-#      options:
-#        path: /var/lib/grafana/dashboards/default
-
 dashboards: {}
 
 dashboardsConfigMaps: {}
-#  default: ""
 
-## Grafana's primary configuration
-## NOTE: values in map will be converted to ini format
-## ref: http://docs.grafana.org/installation/configuration/
-##
 grafana.ini:
   paths:
     data: /var/lib/grafana/data
@@ -220,34 +158,15 @@ grafana.ini:
     mode: console
   grafana_net:
     url: https://grafana.net
-## LDAP Authentication can be enabled with the following values on grafana.ini
-## NOTE: Grafana will fail to start if the value for ldap.toml is invalid
-  # auth.ldap:
-  #   enabled: true
-  #   allow_sign_up: true
-  #   config_file: /etc/grafana/ldap.toml
-
-## Grafana's LDAP configuration
-## Templated by the template in _helpers.tpl
-## NOTE: To enable the grafana.ini must be configured with auth.ldap.enabled
-## ref: http://docs.grafana.org/installation/configuration/#auth-ldap
-## ref: http://docs.grafana.org/installation/ldap/#configuration
 ldap:
-  # `existingSecret` is a reference to an existing secret containing the ldap configuration
-  # for Grafana in a key `ldap-toml`.
   existingSecret: ""
-  # `config` is the content of `ldap.toml` that will be stored in the created secret
   config: ""
 
 smtp:
-  # `existingSecret` is a reference to an existing secret containing the smtp configuration
-  # for Grafana.
   existingSecret: ""
   userKey: "user"
   passwordKey: "password"
 
-## Sidecars that collect the configmaps with specified label and stores the included files them into the respective folders
-## Requires at least Grafana 5 to work and can't be used together with parameters dashboardProviders, datasources and dashboards
 sidecar:
   image: kiwigrid/k8s-sidecar:0.0.16
   imagePullPolicy: IfNotPresent
@@ -255,21 +174,11 @@ sidecar:
 
   dashboards:
     enabled: false
-    # label that the configmaps with dashboards are marked with
     label: grafana_dashboard
-    # folder in the pod that should hold the collected dashboards (unless `defaultFolderName` is set)
     folder: /tmp/dashboards
-    # The default folder name, it will create a subfolder under the `folder` and put dashboards in there instead
     defaultFolderName: null
-    # If specified, the sidecar will search for dashboard config-maps inside this namespace.
-    # Otherwise the namespace in which the sidecar is running will be used.
-    # It's also possible to specify ALL to search in all namespaces
     searchNamespace: null
   datasources:
     enabled: false
-    # label that the configmaps with datasources are marked with
     label: grafana_datasource
-    # If specified, the sidecar will search for datasource config-maps inside this namespace.
-    # Otherwise the namespace in which the sidecar is running will be used.
-    # It's also possible to specify ALL to search in all namespaces
     searchNamespace: null
