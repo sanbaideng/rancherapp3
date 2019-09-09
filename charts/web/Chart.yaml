@@ -1,0 +1,8 @@
+apiVersion: v1
+name: web
+version: 1.0
+appVersion: 
+description: javaweb
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568024091822&di=ee8b31373d0966fa094fb59e5874648f&imgtype=0&src=http%3A%2F%2Fwww.uimaker.com%2Fuploads%2Fallimg%2F120801%2F1_120801013157_2.png
+keywords: 
+  - javaweb
