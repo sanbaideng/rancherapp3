@@ -19,26 +19,26 @@ spec:
         app.kubernetes.io/name: {{ include "mychart.fullname" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      volumes:
+        - name: vol
+          hostPath:
+            path: /sys/fs/cgroup
       containers:
-        - name: a-{{ .Chart.Name }}
+        - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+          - name: vol
+            mountPath: /sys/fs/cgroup
+            readOnly: true
+          securityContext:
+            privileged: true
           ports:
             - name: http
-              containerPort: {{ .Values.image.port }}
+              containerPort: 8080
               protocol: TCP
-          {{- if .Values.volumes }}
-          volumeMounts: 
-            {{- range $index, $volume := .Values.volumes }}
-            - name: v-{{ $index }}
-              mountPath: {{ $volume.mountPath }}
-            {{- end }}             
-          {{- end }}
-      {{- if .Values.volumes }}
-      volumes: 
-        {{- range $index, $volume := .Values.volumes }}
-        - name: v-{{ $index }}
-          persistentVolumeClaim:
-            claimName: {{ include "mychart.fullname" $ }}-pvc-{{ $index }}
-        {{- end }}
-      {{- end -}}
+            - name: myport
+              containerPort: 3389
+              protocol: TCP
+          resources:
+            {}
