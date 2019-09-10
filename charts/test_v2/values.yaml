@@ -16,7 +16,7 @@ ceph:
     - 172.16.20.239:6789
     - 172.16.20.77:6789
   user: admin
-  secret: ceph-secret-client-admin
+  secret: $ceph.secret
 
 ingress:
   enabled: true
