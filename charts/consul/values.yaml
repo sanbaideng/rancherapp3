@@ -114,8 +114,3 @@ nodeSelector: {}
 tolerations: []
 persistence:
   name : a
- 
-volumes: 
-  - mountPath: /var/lib/consul
-    size: 1Gi
-    cephPath: ${cephpath}/default
