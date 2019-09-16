@@ -4,7 +4,7 @@ image:
   port: 1002
 
   volumes:
-    - path: /opt
+    - path: /opt111
       size: 200
       cephPath: /ceph
 
