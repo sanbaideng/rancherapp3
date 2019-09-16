@@ -1,10 +1,10 @@
 image:
-  name: reg.cecii.cn/elfinder06/test01102
+  name: reg.cecii.cn/elfinder06/test02102
   tag: v2
-  port: 1002
+  port: 80
 
   volumes:
-    - path: /opt111
+    - path: /home/h2
       size: 200
       cephPath: /ceph
 
