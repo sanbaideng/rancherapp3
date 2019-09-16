@@ -1,0 +1,10 @@
+apiVersion: v1
+name: fsa
+version: sdf
+description: fasdf
+keywords:
+  - sdfasdf
+home: ${home}
+icon: safsfsaf
+appVersion: sdf
+
