@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test
+version: v2
+description: v2
+keywords:
+  - ss
+home: ${home}
+icon: s
+appVersion: v2
+
