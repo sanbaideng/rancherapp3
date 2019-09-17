@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test5
+version: 23
+description: 3r2
+keywords:
+  - 3r23r
+home: ${home}
+icon: 23r23
+appVersion: 23
+
