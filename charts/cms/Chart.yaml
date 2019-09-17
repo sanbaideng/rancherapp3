@@ -1,0 +1,10 @@
+apiVersion: v1
+name: cms
+version: V1.0.0
+description: "销-供-产-研-质”一体化集成解决方案 
+keywords:
+  - 销-供-产-研-质
+home: ${home}
+icon: http://cloud.cecii.cn
+appVersion: V1.0.0
+
