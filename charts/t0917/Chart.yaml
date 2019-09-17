@@ -1,0 +1,10 @@
+apiVersion: v1
+name: t0917
+version: v1
+description: 应用版本
+keywords:
+  - 1
+home: ${home}
+icon: https://image.cc0.cn/201906/20190529015745183.jpg?x-oss-process=style/www.cc0.cn-1200px
+appVersion: v1
+
