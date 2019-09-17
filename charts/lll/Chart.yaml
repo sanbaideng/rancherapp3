@@ -1,0 +1,10 @@
+apiVersion: v1
+name: lll
+version: 1.0
+description: we
+keywords:
+  - w
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568720138741&di=744738e037648fb83d50cadc2fd697bd&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F53375f3a5bff34e5e44ce70ab5c4fe99f9e8bdb759b1-NmfxR2_fw658
+appVersion: 1.0
+
