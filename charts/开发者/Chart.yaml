@@ -1,0 +1,10 @@
+apiVersion: v1
+name: 开发者
+version: V1.0.1
+description: 开发者个人应用，类型生产制造
+keywords:
+  - 生产制造
+home: ${home}
+icon: http://cloud.cecii.cn
+appVersion: V1.0.1
+
