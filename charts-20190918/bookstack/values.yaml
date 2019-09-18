@@ -1,0 +1,91 @@
+replicaCount: 1
+
+image:
+  repository: solidnerd/bookstack
+  tag: 0.25.2
+  pullPolicy: IfNotPresent
+
+app:
+  key:
+
+externalDatabase:
+  ## Database host
+  host:
+
+  ## Database host
+  port: 3306
+
+  ## Database user
+  user: bookstack
+
+  ## Database password
+  password:
+
+  ## Database name
+  database: bookstack
+
+mariadb:
+  enabled: true
+  replication:
+    enabled: false
+  db:
+    name: bookstack
+    user: bookstack
+
+  master:
+    persistence:
+      enabled: false
+
+      accessMode: ReadWriteOnce
+      size: 8Gi
+
+service:
+  type: ClusterIP
+  port: 80
+
+podSecurityPolicy:
+  enabled: false
+
+rbac:
+  create: true
+
+serviceAccount:
+  create: true
+
+  name:
+
+persistence:
+  uploads:
+    enabled: false
+
+    accessMode: ReadWriteOnce
+    size: 8Gi
+  storage:
+    enabled: false
+
+    accessMode: ReadWriteOnce
+    size: 8Gi
+
+ingress:
+  enabled: true
+  annotations: {}
+  path: /
+  host: ${host}
+  tls: []
+resources: {}
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+ldap:
+  enabled: false
+  server:
+  base_dn:
+  dn:
+  pass:
+  userFilter:
+  version:

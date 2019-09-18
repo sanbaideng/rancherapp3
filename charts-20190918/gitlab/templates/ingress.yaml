@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata: 
+  name: {{ template "gitlab.fullname" . }}
+spec: 
+  rules: 
+  - host: {{ .Values.appmain.ingress }}
+    http: 
+      paths: 
+        - backend: 
+            serviceName: {{ template "gitlab.fullname" . }}
+            servicePort: 80

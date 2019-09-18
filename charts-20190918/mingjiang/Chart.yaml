@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: 明匠云系统管理后台是深圳明匠智能开发的一套多租户，基于配置的。
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp/master/charts/icons/mingjiang.png
+keywords:
+- web
+name: mingjiang
+version: 0.1.0

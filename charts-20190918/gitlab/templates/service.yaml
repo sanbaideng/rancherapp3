@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: {{ template "gitlab.fullname" . }}
+spec: 
+  selector: 
+    app: {{ template "gitlab.fullname" . }}
+  ports: 
+  - port: 80
+    name: http
+  - port: 443
+    name: https
+  - port: 22
+    name: ssh
