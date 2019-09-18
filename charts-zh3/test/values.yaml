@@ -1,0 +1,30 @@
+image:
+  name: "reg.cecii.cn/zhanghu-test/test"
+  tag: "v1.0.0"
+  port: 8080
+
+  volumes:
+    - path: 
+      size: 1
+      cephPath: /zhanghu/201909/01
+
+  envs:
+    - name: DB_URL
+      value: jdbc:mysql://localhost:3306
+    - name: DB_USER
+      value: root
+    - name: DB_PASS
+      value: 123456
+
+ceph:
+  monitors:
+    - 192.168.1.20:6789
+    - 192.168.1.22:6789
+    - 192.168.1.23:6789
+  user: admin
+  secret: ceph-secret-client-admin
+
+ingress:
+  enabled: true
+  host: test.os.cecii.cn
+
