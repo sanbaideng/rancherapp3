@@ -1,12 +1,9 @@
 image:
   name: "reg.cecii.cn/elfinder06/t0918"
   tag: "t0918"
-  port: 8080
+  port: 8090
 
-  volumes:
-    - path: 
-      size: 200
-      cephPath: /ceph
+  volumes: []
 
   envs: []
 
