@@ -1,0 +1,10 @@
+apiVersion: v1
+name: lipei1621
+version: 1.0
+description: lipei1621
+keywords:
+  - lipei1621
+home: ${home}
+icon: lipei1621
+appVersion: 1.0
+
