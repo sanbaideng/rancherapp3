@@ -1,0 +1,10 @@
+apiVersion: v1
+name: 测试
+version: 1.0
+description: 测试
+keywords:
+  - 测试
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568801644001&di=d62cd5466d39147215a55af8b3c4f5f3&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161026%2Febf0b973ca6b4d60a0adbbdf3b7ffc84_th.png
+appVersion: 1.0
+
