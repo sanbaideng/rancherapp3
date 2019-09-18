@@ -1,0 +1,10 @@
+apiVersion: v1
+name: season
+version: V1.0.0.1
+description: 集市场营销、运营服务、产品研发于一体，坐落在北京最接近云的香山脚下，胸怀亚太，放眼世界，致力于成为亚太领先的云计算基础服务提供商
+keywords:
+  - 运营服务
+home: ${home}
+icon: C:\Users\pengr\Pictures\APP2
+appVersion: V1.0.0.1
+
