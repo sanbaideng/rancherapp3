@@ -1,0 +1,10 @@
+apiVersion: v1
+name: 中国
+version: 1.0
+description: 中国结
+keywords:
+  - 中国
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568782108074&di=2a4318904edaa257e0ea3676eb559eac&imgtype=0&src=http%3A%2F%2Fen.pimg.jp%2F013%2F460%2F498%2F1%2F13460498.jpg
+appVersion: 1.0
+
