@@ -1,10 +1,10 @@
 apiVersion: v1
 name: 测试
-version: 2.0
-description: er
+version: 3.0
+description: 45
 keywords:
-  - er
+  - 12
 home: ${home}
-icon: er
-appVersion: 2.0
+icon: 12
+appVersion: 3.0
 
