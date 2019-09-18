@@ -1,0 +1,10 @@
+apiVersion: v1
+name: kitty3
+version: 3.0
+description: 为用户提供云主机、云存储、云备份、桌面云、专享云、混合云、CDN、大数据等全线产品，同时为政府、医疗、教育、金融等行业打造定制化云解决方案，是政府企业客户的首选云服务商
+keywords:
+  - 研发设计
+home: ${home}
+icon: http://cloud.cecii.cn
+appVersion: 3.0
+
