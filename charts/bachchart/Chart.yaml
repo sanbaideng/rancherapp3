@@ -1,0 +1,10 @@
+apiVersion: v1
+name: bachchart
+version: 1.0
+description: 此helm图表创建Schema-Registry-UI服务器。
+keywords:
+  - 图表
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569475922&di=d29af4de1d1b48f8b95a6cb7badd92d5&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F012aa757134f2332f8758c9b8536a3.png
+appVersion: 1.0
+
