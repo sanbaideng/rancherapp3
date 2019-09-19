@@ -1,0 +1,18 @@
+image:
+  repository: reg.cecii.cn/pub/bachvio-all
+  tag: v2
+  port: 8080
+  pullPolicy: Always
+    
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  host: ${host}
+  tls: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1

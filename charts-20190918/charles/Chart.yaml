@@ -1,0 +1,7 @@
+apiVersion: v1
+name: charles
+version: 1.0
+appVersion: 
+description: 数据过滤工具
+keywords: 
+  - filter

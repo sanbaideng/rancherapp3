@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "mychart.fullname" $ }}-mysql
+  labels:
+    name: {{ include "mychart.fullname" $ }}-mysql
+    namespace: {{ .Values.global.namespace | quote }}
+spec:
+  capacity:
+    storage: {{ .Values.capacity }}
+  accessModes:
+    - ReadWriteOnce
+  cephfs:
+    monitors:
+      - {{ .Values.global.storageAddr }}
+    path: {{ .Values.cephpath }}
+    user: {{ .Values.global.cephUser }}
+    secretRef:
+      name: {{ .Values.global.cephSecret }}
+      namespace: default
+    readOnly: false
+  persistentVolumeReclaimPolicy: Retain

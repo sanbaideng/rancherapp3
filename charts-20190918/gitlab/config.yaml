@@ -1,0 +1,26 @@
+global: 
+  storageAddr: ""
+  storagePath: ""
+  namespace: "default"
+  releaseName: ""
+  cephUser: "admin"
+  cephSecret: "ceph-secret-client-admin"
+appmain:
+  pv: apv
+  pvc: apvc
+  capacity: 1Gi
+  ingress: "gitlab.cecii.cn"
+  path: ""
+applog:
+  pv: bpv
+  pvc: bpvc
+  capacity: 1Gi
+  ingress: "b"
+  path: ""
+appconfig:
+  pv: cpv
+  pvc: cpvc
+  capacity: 1Gi
+  ingress: "c"
+  path: ""
+    

@@ -1,0 +1,184 @@
+rbac:
+  create: true
+  pspEnabled: true
+  pspUseAppArmor: true
+  namespaced: false
+serviceAccount:
+  create: true
+  name:
+  nameTest:
+
+replicas: 1
+
+deploymentStrategy:
+  type: RollingUpdate
+  rollingUpdate: null
+
+readinessProbe:
+  httpGet:
+    path: /api/health
+    port: 3000
+
+livenessProbe:
+  httpGet:
+    path: /api/health
+    port: 3000
+  initialDelaySeconds: 60
+  timeoutSeconds: 30
+  failureThreshold: 10
+
+image:
+  repository: grafana/grafana
+  tag: 6.2.4
+  pullPolicy: IfNotPresent
+
+testFramework:
+  image: "dduportal/bats"
+  tag: "0.4.0"
+
+securityContext:
+  runAsUser: 472
+  fsGroup: 472
+
+
+extraConfigmapMounts: []
+  # - name: certs-configmap
+  #   mountPath: /etc/grafana/ssl/
+  #   configMap: certs-configmap
+  #   readOnly: true
+
+
+extraEmptyDirMounts: []
+downloadDashboardsImage:
+  repository: appropriate/curl
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+    # targetPort: 4181 To be used with a proxy extraContainer
+  annotations: {}
+  labels: {}
+
+ingress:
+  enabled: true
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  labels: {}
+  path: /
+  host: ${host}
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+#  limits:
+#    cpu: 100m
+#    memory: 128Mi
+#  requests:
+#    cpu: 100m
+#    memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+extraInitContainers: []
+
+extraContainers: |
+
+persistence:
+  enabled: false
+  # storageClassName: default
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+  # annotations: {}
+  # subPath: ""
+  # existingClaim:
+
+initChownData:
+  enabled: true
+
+  ## initChownData container image
+  ##
+  image:
+    repository: busybox
+    tag: "1.30"
+    pullPolicy: IfNotPresent
+
+  resources: {}
+  #  limits:
+  #    cpu: 100m
+  #    memory: 128Mi
+  #  requests:
+  #    cpu: 100m
+  #    memory: 128Mi
+
+
+adminUser: admin
+admin:
+  existingSecret: ""
+  userKey: admin-user
+  passwordKey: admin-password
+
+env: {}
+
+envFromSecret: ""
+
+extraSecretMounts: []
+extraVolumeMounts: []
+
+plugins: []
+
+datasources: {}
+
+notifiers: {}
+
+dashboardProviders: {}
+dashboards: {}
+
+dashboardsConfigMaps: {}
+
+grafana.ini:
+  paths:
+    data: /var/lib/grafana/data
+    logs: /var/log/grafana
+    plugins: /var/lib/grafana/plugins
+    provisioning: /etc/grafana/provisioning
+  analytics:
+    check_for_updates: true
+  log:
+    mode: console
+  grafana_net:
+    url: https://grafana.net
+ldap:
+  existingSecret: ""
+  config: ""
+
+smtp:
+  existingSecret: ""
+  userKey: "user"
+  passwordKey: "password"
+
+sidecar:
+  image: kiwigrid/k8s-sidecar:0.0.16
+  imagePullPolicy: IfNotPresent
+  resources: {}
+
+  dashboards:
+    enabled: false
+    label: grafana_dashboard
+    folder: /tmp/dashboards
+    defaultFolderName: null
+    searchNamespace: null
+  datasources:
+    enabled: false
+    label: grafana_datasource
+    searchNamespace: null

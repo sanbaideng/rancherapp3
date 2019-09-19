@@ -1,0 +1,85 @@
+
+image:
+  registry: docker.io
+  repository: bitnami/dokuwiki
+  tag: 0.20180422.201901061035-debian-9-r126
+
+  pullPolicy: IfNotPresent
+
+dokuwikiUsername: user
+dokuwikiEmail: user@example.com
+dokuwikiFullName: User Name
+dokuwikiWikiName: My Wiki
+
+service:
+
+  type: LoadBalancer
+
+  port: 80
+  # HTTPS Port
+  httpsPort: 443
+
+  nodePorts:
+    http: ""
+    https: ""
+
+  externalTrafficPolicy: Cluster
+
+ingress:
+  enabled: true
+
+  host: ${host}
+
+    tls: false
+    certManager: false
+
+    tlsSecret: dokuwiki.local-tls
+    annotations:
+  secrets:
+persistence:
+  enabled: false
+  dokuwiki:
+    accessMode: ReadWriteOnce
+    size: 8Gi
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 300m
+
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 120
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+## Configuration options for nodeSelector, tolerations and affinity for pod
+## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+## Pod annotations
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+##
+podAnnotations: {}
+## Prometheus Exporter / Metrics
+##
+metrics:
+  enabled: false
+  image:
+    registry: docker.io
+    repository: lusotycoon/apache-exporter
+    tag: v0.5.0
+    pullPolicy: IfNotPresent
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9117"
