@@ -1,0 +1,10 @@
+apiVersion: v1
+name: javaUI
+version: 1.0
+description: javaUI
+keywords:
+  - java
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569325435719&di=244e41b7db50eef35c38893f6fd489d1&imgtype=0&src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F6%2F43%2F71%2F90%2F859ec94e02863759c38c7cd808a56740.jpg
+appVersion: 1.0
+
