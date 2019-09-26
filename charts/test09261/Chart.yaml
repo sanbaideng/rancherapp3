@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test09261
+version: 2.0
+description: test09261
+keywords:
+  - test09261
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569499150930&di=8b5da9cd443f6a122ee066fa5084f874&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Ffe3ed78374ee7c44b3842e7b9d0e255b406328d6801e4-aGp2FC_fw658
+appVersion: 2.0
+
