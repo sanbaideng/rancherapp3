@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test0947
+version: test0947
+description: test0947
+keywords:
+  - test0947
+home: ${home}
+icon: test0947
+appVersion: test0947
+
