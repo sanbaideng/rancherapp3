@@ -68,9 +68,9 @@ ingress:
   ## Set to true to enable ingress record generation
   enabled: true
   host: ${host}
-    tls: false
-    certManager: false
-    tlsSecret: redmine.local-tls
+  tls: false
+  certManager: false
+  tlsSecret: redmine.local-tls
 
     annotations:
 
