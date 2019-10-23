@@ -30,11 +30,10 @@ ingress:
 
   host: ${host}
 
-    tls: false
-    certManager: false
-
-    tlsSecret: dokuwiki.local-tls
-    annotations:
+  tls: false
+  certManager: false
+  tlsSecret: dokuwiki.local-tls
+  annotations:
   secrets:
 persistence:
   enabled: false
