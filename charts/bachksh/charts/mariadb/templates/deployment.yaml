@@ -13,9 +13,6 @@ spec:
       labels:
         app: {{ template "mariadb.fullname" . }}
     spec:
-      securityContext:
-        runAsUser: 1001
-        fsGroup: 1001
       containers:
       - name: mariadb
         image: "{{ .Values.image }}"

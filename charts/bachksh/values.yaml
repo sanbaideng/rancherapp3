@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 image: reg.cecii.cn/pk/bachvio:v1
 
-replicaCount: 3
+replicaCount: 1
 
 istioSidecar:
   enabled: false
@@ -75,10 +75,10 @@ readinessProbe:
 ingress:
   ## Set to true to enable ingress record generation
   enabled: true
-  host: ${host}
-    tls: false
-    tlsSecret: wordpress.local-tls
-    annotations:
+  host: yang.lacal.com
+  tls: false
+  tlsSecret: wordpress.local-tls
+  annotations:
   secrets:
 
 persistence:
@@ -93,8 +93,3 @@ resources:
   requests:
     memory: 512Mi
     cpu: 300m
-
-## Node labels for pod assignment
-## Ref: https://kubernetes.io/docs/user-guide/node-selection/
-##
-nodeSelector: {}

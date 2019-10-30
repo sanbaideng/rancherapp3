@@ -76,9 +76,9 @@ ingress:
   ## Set to true to enable ingress record generation
   enabled: true
   host: ${host}
-    tls: false
-    tlsSecret: wordpress.local-tls
-    annotations:
+  tls: false
+  tlsSecret: wordpress.local-tls
+  annotations:
   secrets:
 
 persistence:
