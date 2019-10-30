@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test1024
+version: 1.0
+description: test1024
+keywords:
+  - test1024
+home: ${home}
+icon: test1024
+appVersion: 1.0
+
