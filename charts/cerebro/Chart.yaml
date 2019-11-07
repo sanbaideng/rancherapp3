@@ -6,7 +6,7 @@ keywords:
 - 其他
 description: A Helm chart for Cerebro - a web admin tool that replaces Kopf.
 home: https://github.com/lmenezes/cerebro
-icon: https://raw.githubusercontent.com/sanbaideng/rancherapp3/master/charts/icons/cerebro.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/cerebro.png
 sources:
  - https://github.com/lmenezes/cerebro-docker
  - https://github.com/lmenezes/cerebro
