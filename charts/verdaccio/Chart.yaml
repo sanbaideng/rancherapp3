@@ -3,7 +3,7 @@ description: A lightweight private npm proxy registry (sinopia fork)
 name: verdaccio
 version: 0.7.1
 appVersion: 3.11.6
-icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gear.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 home: http://www.verdaccio.org
 sources:
 - http://www.verdaccio.org

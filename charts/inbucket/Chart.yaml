@@ -3,7 +3,7 @@ description: Inbucket is an email testing application
 name: inbucket
 appVersion: 2.0.0
 version: 3.1.0
-icon: https://raw.githubusercontent.com/sanbaideng/rancherapp2/master/charts/icons/gear.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 keywords:
   - 其他
 home: https://www.inbucket.org/

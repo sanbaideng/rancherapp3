@@ -5,6 +5,6 @@ description: jiajia
 keywords:
   - jiajia
 home: ${home}
-icon: jiajia
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 appVersion: 3.0
 

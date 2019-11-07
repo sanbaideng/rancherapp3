@@ -7,7 +7,7 @@ maintainers:
 sources:
 - https://github.com/spotify/luigi/
 - https://github.com/sammerry/luigi-docker-image/
-icon: https://raw.githubusercontent.com/spotify/luigi/master/doc/luigi.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/luigi.png
 keywords:
 - 其他
 name: luigi

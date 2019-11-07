@@ -3,5 +3,6 @@ name: mariadb
 version: 0.1.0
 appVersion: v10.4
 description: ""
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/mariadb.png
 keywords: 
   - MariaDb

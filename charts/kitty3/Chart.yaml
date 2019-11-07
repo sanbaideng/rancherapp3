@@ -5,6 +5,6 @@ description: 为用户提供云主机、云存储、云备份、桌面云、专�
 keywords:
   - 生产制造
 home: ${home}
-icon: http://cloud.cecii.cn
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 appVersion: 5.0
 

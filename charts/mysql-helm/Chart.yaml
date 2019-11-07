@@ -3,6 +3,7 @@ name: mysql
 version: 0.1.0
 appVersion: 5.7.26
 description: 
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/mysql.png
 keywords: 
   - 数据库
   - MySQL

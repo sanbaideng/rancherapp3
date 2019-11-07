@@ -10,6 +10,6 @@ maintainers:
 - name: pmint93
   email: phamminhthanh69@gmail.com
 home: http://www.metabase.com/
-icon: http://www.metabase.com/images/logo.svg
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/metabase.svg
 sources:
 - https://github.com/metabase/metabase

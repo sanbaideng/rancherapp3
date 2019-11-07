@@ -5,7 +5,7 @@ appVersion: 6.2.4
 kubeVersion: "^1.8.0-0"
 description: The leading tool for querying and visualizing time series and metrics.
 home: https://grafana.net
-icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/grafana.png
 sources:
   - https://github.com/grafana/grafana
 maintainers:
