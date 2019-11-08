@@ -24,18 +24,3 @@ spec:
         backend:
           serviceName: {{ template "osclass.fullname" $ }}
           servicePort: http
-  tls:
-  {{- range .Values.ingress.hosts }}
-  {{- if .tls }}
-  - hosts:
-  {{- if .tlsHosts }}
-  {{- range $host := .tlsHosts }}
-    - {{ $host }}
-  {{- end }}
-  {{- else }}
-    - {{ .name }}
-  {{- end }}
-    secretName: {{ .tlsSecret }}
-  {{- end }}
-  {{- end }}
-{{- end }}
