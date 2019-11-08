@@ -20,7 +20,7 @@ spec:
   - host: {{ .Values.osclassHost }}
     http:
       paths:
-      - path: {{ "/"  }}
+      - path: {{ "/" }}
         backend:
           serviceName: {{ template "osclass.fullname" $ }}
           servicePort: http
