@@ -21,10 +21,10 @@ metadata:
     {{- end }}
 spec:
   rules:
-  - host: {{ .name }}
+  - host: {{ .Values.owncloudHost }}
     http:
       paths:
-        - path: {{ default "/" .path }}
+        - path: {{ "/" }}
           backend:
             serviceName: {{ template "owncloud.fullname" $ }}
             servicePort: 80
