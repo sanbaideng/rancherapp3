@@ -188,7 +188,7 @@ ingress:
 
   server:
     hosts:
-      - name: ${host}
+      - name: parse-server.local
         path: /
 
         tls: false
