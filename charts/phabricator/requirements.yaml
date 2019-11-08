@@ -1,0 +1,3 @@
+dependencies:
+- name: mariadb
+  version: 6.x.x
