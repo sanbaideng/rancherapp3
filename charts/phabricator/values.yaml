@@ -38,7 +38,7 @@ image:
 ## Phabricator host to create application URLs
 ## ref: https://github.com/bitnami/bitnami-docker-phabricator#configuration
 ##
-phabricatorHost: phabricator.local
+phabricatorHost: ${host}
 
 ## Phabricator alternate domain to upload files
 ## ref: https://github.com/bitnami/bitnami-docker-phabricator#configuration

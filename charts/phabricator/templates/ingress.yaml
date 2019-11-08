@@ -17,15 +17,13 @@ metadata:
     {{- end }}
 spec:
   rules:
-  {{- range .Values.ingress.hosts }}
-  - host: {{ .name }}
+  - host: {{ .Values.phabricatorHost }}
     http:
       paths:
-        - path: {{ default "/" .path }}
+        - path: {{ "/" }}
           backend:
             serviceName: {{ template "phabricator.fullname" $ }}
             servicePort: http
-  {{- end }}
   tls:
   {{- range .Values.ingress.hosts }}
   {{- if .tls }}
