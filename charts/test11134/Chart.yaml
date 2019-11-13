@@ -1,0 +1,10 @@
+apiVersion: v1
+name: test11134
+version: 4.0
+description: test11134
+keywords:
+  - test11134
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573645388022&di=0170028bc469096d575dd8398d1f8923&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F32%2F65%2F5956d37c18201bf.jpg
+appVersion: 4.0
+
