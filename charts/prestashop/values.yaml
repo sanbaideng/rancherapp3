@@ -29,8 +29,6 @@ mariadb:
   db:
     name: bitnami_prestashop
     user: bn_prestashop
-  rootUser:
-    password: "123456"
   master:
     persistence:
       enabled: false
