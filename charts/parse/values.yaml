@@ -99,6 +99,6 @@ persistence:
 mongodb:
   usePassword: true
   persistence:
-    enabled: true
+    enabled: false
     accessMode: ReadWriteOnce
     size: 8Gi
