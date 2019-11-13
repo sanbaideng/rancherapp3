@@ -49,7 +49,7 @@ ingress:
   certManager: false
   annotations:
   hosts:
-  - name: prestashop.local
+  - name: ${host}
     path: /
     tls: false
     tlsSecret: prestashop.local-tls
