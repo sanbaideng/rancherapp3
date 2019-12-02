@@ -41,32 +41,12 @@ spec:
         - name: DB_PORT
           value: "3306"
         - name: INGRESS_URL
-          value: {{ .Values.ingress.host }}
+          value: "{{ .Values.ingress.host }}"
         ports:
         - name: http
           containerPort: 8071
         - name: https
           containerPort: 443
-        livenessProbe:
-          httpGet:
-            path: /
-          {{- if not .Values.healthcheckHttps }}
-            port: http
-          {{- else }}
-            port: https
-            scheme: HTTPS
-          {{- end }}
-{{ toYaml .Values.livenessProbe | indent 10 }}
-        readinessProbe:
-          httpGet:
-            path: /
-          {{- if not .Values.healthcheckHttps }}
-            port: http
-          {{- else }}
-            port: https
-            scheme: HTTPS
-          {{- end }}
-{{ toYaml .Values.readinessProbe | indent 10 }}          
         volumeMounts:
         - mountPath: /bitnami/apache
           name: wordpress-data

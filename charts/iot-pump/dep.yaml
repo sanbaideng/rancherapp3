@@ -1,0 +1,60 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wobbly-clam-iot-pump
+  labels:
+    app: wobbly-clam-iot-pump
+    chart: "iot-pump-0.1.1"
+    release: "wobbly-clam"
+    heritage: "Tiller"
+spec:
+  selector:
+    matchLabels:
+      app: wobbly-clam-iot-pump
+      release: "wobbly-clam"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wobbly-clam-iot-pump
+        chart: "iot-pump-0.1.1"
+        release: "wobbly-clam"
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      containers:
+      - name: wobbly-clam-iot-pump
+        image: "reg.cecii.cn/pk/iot-pump:dev"
+        imagePullPolicy: "IfNotPresent"
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          value: "123456"
+        - name: DB_HOST
+          value: "10.0.10.36"
+        - name: DB_PORT
+          value: "3306"
+        - name: INGRESS_URL
+          value: "10.0.10.31:31602"
+        ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+        volumeMounts:
+        - mountPath: /bitnami/apache
+          name: wordpress-data
+          subPath: apache
+        - mountPath: /bitnami/wordpress
+          name: wordpress-data
+          subPath: wordpress
+        - mountPath: /bitnami/php
+          name: wordpress-data
+          subPath: php
+        resources:
+          requests:
+            cpu: 300m
+            memory: 512Mi
+          
+      volumes:
+      - name: wordpress-data
+        emptyDir: {}

@@ -1,5 +1,5 @@
 apiVersion: extensions/v1beta1
-image: reg.cecii.cn/pub/iotpumb:dev
+image: reg.cecii.cn/pk/iot-pump:v3
 
 replicaCount: 1
 
@@ -64,7 +64,7 @@ readinessProbe:
 ingress:
   ## Set to true to enable ingress record generation
   enabled: true
-  host: ${host}
+  host: iotpump.os.cecii.cn
   tls: false
   tlsSecret: wordpress.local-tls
   annotations:

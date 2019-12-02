@@ -2,7 +2,7 @@
 ## ref: https://hub.docker.com/r/bitnami/mariadb/tags/
 ##
 ## Default: none
-image: reg.cecii.cn/pub/mariadb-iotpub:v1
+image: reg.cecii.cn/pk/mariadb-iotpump:v1
 
 ## Specify an imagePullPolicy (Required)
 ## It's recommended to change this to 'Always' if the image tag is 'latest'
