@@ -1,5 +1,5 @@
 apiVersion: extensions/v1beta1
-image: reg.cecii.cn/pk/iot-pump:v3
+image: reg.cecii.cn/pub/iotpumb:dev
 
 replicaCount: 1
 
