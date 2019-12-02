@@ -1,6 +1,6 @@
 image:
-  repository: reg.cecii.cn/pub/bachvio-all
-  tag: v2
+  repository: reg.cecii.cn/bachvio/bachvio
+  tag: v1.0.0
   port: 8080
   pullPolicy: Always
     
@@ -9,7 +9,7 @@ service:
 
 ingress:
   enabled: true
-  host: ${host}
+  host: bachvio.os.cecii.cn
   tls: []
 
 nameOverride: ""
