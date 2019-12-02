@@ -1,7 +1,7 @@
-# MariaDB版本、root密码
+# MySQL版本、root密码
 image:
-  repository: mariadb
-  tag: 10.4
+  repository: mysql
+  tag: 5.7.26
   port: 3306
   rootPass: "123456"
   pullPolicy: IfNotPresent 
@@ -9,7 +9,7 @@ image:
 # 配置文件 - Linux下忽略大小写配置
 conf: 
   enabled: true
-  image: reg.cecii.cn/bachvio/cnf
+  image: reg.cecii.cn/mysql-data/cnf
   imageTag: v1.0.0
   filePath: /cnf
   pullPolicy: Always
@@ -17,7 +17,7 @@ conf:
 # 初始化sql语句 - 创建数据库并初始化
 sql: 
   enabled: true
-  image: reg.cecii.cn/bachvio/sql
+  image: reg.cecii.cn/mysql-data/sql
   imageTag: v1.0.0
   filePath: /sql
   pullPolicy: Always
@@ -30,15 +30,15 @@ persistence:
     monitors:
       - 192.168.1.20:6789
       - 192.168.1.22:6789
-      - 192.168.1.23:6789
+      - 192.168.1.23:6789 
     user: admin
     secretRef: 
       name: ceph-secret-client-admin
-  path: /bachvio/mariadb
+  path: /javaweb2/mysql
   
-# mariadb服务名
+# mnysql服务名
 service:
-  name: bachvio-mariadb
+  name: javaweb2-mysql
   type: ClusterIP
 
 nameOverride: ""

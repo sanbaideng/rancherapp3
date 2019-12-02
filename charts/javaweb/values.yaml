@@ -1,5 +1,5 @@
 image:
-  repository: reg.cecii.cn/bachvio/bachvio
+  repository: reg.cecii.cn/javaweb/javaweb
   tag: v1.0.0
   port: 8080
   pullPolicy: Always
@@ -9,7 +9,7 @@ service:
 
 ingress:
   enabled: true
-  host: bachvio.os.cecii.cn
+  host: javaweb.os.cecii.cn
   tls: []
 
 nameOverride: ""

@@ -1,8 +1,9 @@
 apiVersion: v1
-name: bachvio
+name: javaweb2
 version: 0.1.0
 appVersion: v1.0
 description: 应用描述
 keywords: 
-  - bachvio
-  - 订单可视化
+  - JavaWeb2
+  - JDBC
+  - Mysql

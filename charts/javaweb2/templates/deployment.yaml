@@ -23,6 +23,13 @@ spec:
         - name: a-{{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env: 
+            - name: DB_URL
+              value: {{ .Values.image.dbUrl | quote }}
+            - name: DB_USERNAME
+              value: {{ .Values.image.dbUsername | quote }}
+            - name: DB_PASSWORD
+              value: {{ .Values.image.dbPassword | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.image.port }}
