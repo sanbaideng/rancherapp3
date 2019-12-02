@@ -1,3 +1,4 @@
+# MariaDB版本、root密码
 image:
   repository: mariadb
   tag: 10.4
@@ -5,6 +6,7 @@ image:
   rootPass: "123456"
   pullPolicy: IfNotPresent 
 
+# 配置文件 - Linux下忽略大小写配置
 conf: 
   enabled: true
   image: reg.cecii.cn/bachvio/cnf
@@ -12,6 +14,7 @@ conf:
   filePath: /cnf
   pullPolicy: Always
 
+# 初始化sql语句 - 创建数据库并初始化
 sql: 
   enabled: true
   image: reg.cecii.cn/bachvio/sql
@@ -19,6 +22,7 @@ sql:
   filePath: /sql
   pullPolicy: Always
 
+# 数据持久化 cephfs配置 size 单位G
 persistence: 
   enabled: true
   size: 5
@@ -32,6 +36,7 @@ persistence:
       name: ceph-secret-client-admin
   path: /bachvio/mariadb
   
+# mariadb服务名
 service:
   name: bachvio-mariadb
   type: ClusterIP
