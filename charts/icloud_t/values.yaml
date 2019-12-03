@@ -1,0 +1,21 @@
+image:
+  name: "reg.cecii.cn/elfinder06/test12034"
+  tag: "4.0"
+  port: 8080
+
+  volumes: []
+
+  envs: []
+
+ceph:
+  monitors:
+    - 172.16.20.7:6789
+    - 172.16.20.239:6789
+    - 172.16.20.77:6789
+  user: admin
+  secret: $ceph.secret
+
+ingress:
+  enabled: true
+  host: ${host}
+
