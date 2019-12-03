@@ -3,8 +3,8 @@ name: icloud_t
 version: 4.0
 description: Highly available and distributed service discovery and key-value store designed with support for the modern data center to make distributed systems and configuration easy.
 keywords:
-  - easy
+  - css
 home: ${home}
-icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575366726990&di=c0c499cddaf32b22b5994b8ee8d4115c&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01338d5583d8d50000001fa3713edc.jpg
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575366726990&di=41c30cfe3f01aa0822afa5ebe873a8c0&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016dd457dbabe30000012e7e77e1cb.jpg
 appVersion: 4.0
 
