@@ -1,7 +1,7 @@
 image:
   name: "reg.cecii.cn/elfinder06/test12034"
   tag: "4.0"
-  port: 8080
+  port: 7.0
 
   volumes: []
 
