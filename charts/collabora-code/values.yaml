@@ -22,7 +22,7 @@ ingress:
   enabled: false
   annotations: {}
   paths: []
-  hosts: []
+  hosts: [${host}]
   tls: []
 
 collabora:
