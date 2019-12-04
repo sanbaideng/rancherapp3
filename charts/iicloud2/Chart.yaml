@@ -1,0 +1,10 @@
+apiVersion: v1
+name: iicloud2
+version: 2.0
+description: Luigi是一个Python模块，可帮助您构建批处理作业的复杂管道。它处理依赖项解析，工作流管理，可视化等。它还内置了Hadoop支持。
+keywords:
+  - Luigi
+home: ${home}
+icon: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575435141278&di=ee386b7cba844eb840066c20937bf0f6&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F41%2F64%2F37573d4be0922d9.jpg
+appVersion: 2.0
+
