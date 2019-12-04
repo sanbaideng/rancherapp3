@@ -1,0 +1,10 @@
+apiVersion: v1
+name: icloud_t
+version: test
+description: test
+keywords:
+  - test
+home: ${home}
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/evolution.png
+appVersion: test
+
