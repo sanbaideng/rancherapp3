@@ -5,6 +5,7 @@ appVersion: 8.7.3
 description: One of the most versatile open source content management systems.
 keywords:
 - 其他
+- 研发设计
 home: http://www.drupal.org/
 icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
 sources:
