@@ -10,6 +10,7 @@ sources:
 - https://github.com/kelseyhightower/consul-on-kubernetes
 keywords:
   - 研发工具
+  - 研发设计
 maintainers:
 - name: lachie83
   email: lachlan.evenson@microsoft.com
