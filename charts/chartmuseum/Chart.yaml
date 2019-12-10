@@ -9,6 +9,7 @@ keywords:
 - chartmuseum
 - helm
 - charts repo
+- 产品服务
 maintainers:
 - name: codefresh-io
   email: opensource@codefresh.io
