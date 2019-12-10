@@ -5,6 +5,7 @@ description: Centrifugo is a real-time messaging server.
 name: centrifugo
 keywords:
 - 其他
+- 研发设计
 home: https://github.com/centrifugal/centrifugo
 maintainers:
 - name: oleh-ozimok
