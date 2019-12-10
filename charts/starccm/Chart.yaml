@@ -4,5 +4,6 @@ description: Siemens STAR-CCM+提供了业界前沿的计算流体动力学软�
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/star-ccm.jpg
 keywords:
 - gui
+- 研发设计
 name: starccm
 version: 0.1.0
