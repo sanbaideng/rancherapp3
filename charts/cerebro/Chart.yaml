@@ -4,6 +4,7 @@ appVersion: 0.8.3
 apiVersion: v1
 keywords:
 - 其他
+- 研发设计
 description: A Helm chart for Cerebro - a web admin tool that replaces Kopf.
 home: https://github.com/lmenezes/cerebro
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/cerebro.png

@@ -7,6 +7,7 @@ description: DokuWiki is a standards-compliant, simple to use wiki optimized for
   All data is stored in plain text files, so no database is required.
 keywords:
 - 其他
+- 研发设计
 home: http://www.dokuwiki.org/
 sources:
 - https://github.com/bitnami/bitnami-docker-dokuwiki

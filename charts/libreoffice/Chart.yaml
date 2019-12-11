@@ -4,5 +4,6 @@ description: Mozilla libreoffice是由Mozilla浏览器的邮件功能部件所�
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/LibreOffice.jpg
 keywords:
 - gui
+- 运营管理
 name: libreoffice
 version: 0.1.0

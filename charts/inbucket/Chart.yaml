@@ -6,6 +6,7 @@ version: 3.1.0
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 keywords:
   - 其他
+  - 研发设计
 home: https://www.inbucket.org/
 sources:
   - https://github.com/jhillyerd/inbucket
