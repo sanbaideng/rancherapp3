@@ -5,6 +5,7 @@ version: 2.4.16
 appVersion: RELEASE.2019-05-14T23-57-45Z
 keywords:
 - 其他
+- 研发设计
 home: https://min.io
 icon: https://min.io/resources/img/logo/MINIO_wordmark.png
 sources:
