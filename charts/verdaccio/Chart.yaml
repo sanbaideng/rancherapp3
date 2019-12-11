@@ -10,6 +10,7 @@ sources:
 - https://github.com/verdaccio/verdaccio
 keywords:
 - 其他
+- 研发设计
 maintainers:
 - name: etiennetremel
   email: etienne.tremel@container-solutions.com
