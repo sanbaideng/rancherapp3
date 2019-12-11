@@ -9,6 +9,7 @@ sources:
   - https://github.com/prometheus/blackbox_exporter
 keywords:
 - 其他
+- 研发设计
 maintainers:
   - name: gianrubio
     email: gianrubio@gmail.com
