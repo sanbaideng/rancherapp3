@@ -4,5 +4,6 @@ description: NetBeans是Sun公司（2009年被甲骨文收购）在2000年创立
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/netbeans.jpg
 keywords:
 - gui
+- 研发设计
 name: netbeans
 version: 0.1.0

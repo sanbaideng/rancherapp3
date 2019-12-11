@@ -12,6 +12,7 @@ keywords:
 - application
 - php
 - human resources
+- 研发设计
 home: https://www.orangehrm.com
 sources:
 - https://github.com/bitnami/bitnami-docker-orangehrm

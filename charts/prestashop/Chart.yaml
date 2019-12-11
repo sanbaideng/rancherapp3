@@ -9,6 +9,7 @@ keywords:
 - http
 - web
 - php
+- 产品服务
 home: https://prestashop.com/
 sources:
 - https://github.com/bitnami/bitnami-docker-prestashop

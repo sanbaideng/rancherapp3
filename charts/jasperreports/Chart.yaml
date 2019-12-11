@@ -12,6 +12,7 @@ keywords:
 - reporting
 - analytic
 - visualization
+- 研发设计
 home: http://community.jaspersoft.com/project/jasperreports-server
 sources:
 - https://github.com/bitnami/bitnami-docker-jasperreports

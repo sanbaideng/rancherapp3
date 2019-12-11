@@ -7,6 +7,7 @@ home: http://www.mediawiki.org/
 icon: https://bitnami.com/assets/stacks/mediawiki/img/mediawiki-stack-220x234.png
 keywords:
 - 其他
+- 研发设计
 sources:
 - https://github.com/bitnami/bitnami-docker-mediawiki
 maintainers:

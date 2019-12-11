@@ -10,6 +10,7 @@ keywords:
 - http
 - web
 - php
+- 产品服务
 home: https://osclass.org/
 sources:
 - https://github.com/bitnami/bitnami-docker-osclass

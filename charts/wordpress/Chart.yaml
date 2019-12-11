@@ -11,6 +11,7 @@ keywords:
 - web
 - application
 - php
+- 研发设计
 home: http://www.wordpress.com/
 sources:
 - https://github.com/bitnami/bitnami-docker-wordpress

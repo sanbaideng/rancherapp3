@@ -8,6 +8,7 @@ keywords:
 - messaging
 - addressing
 - discovery
+- 研发设计
 home: https://nats.io/
 sources:
 - https://github.com/bitnami/bitnami-docker-nats

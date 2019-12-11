@@ -7,6 +7,7 @@ description: A reverse proxy that provides authentication with Google, Github or
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 keywords:
 - 其他
+- 研发设计
 maintainers:
   - name: miouge1
     email: maxime@root314.com
