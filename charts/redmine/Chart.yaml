@@ -5,6 +5,7 @@ appVersion: 4.0.4
 description: A flexible project management web application.
 keywords:
 - 其他
+- 研发设计
 home: http://www.redmine.org/
 icon: https://bitnami.com/assets/stacks/redmine/img/redmine-stack-220x234.png
 sources:
