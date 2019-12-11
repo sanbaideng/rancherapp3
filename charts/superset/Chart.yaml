@@ -5,6 +5,7 @@ version: 1.1.6
 appVersion: "0.28.1"
 keywords:
 - bi
+- 研发设计
 home: https://github.com/apache/incubator-superset
 icon: https://superset.incubator.apache.org/_images/s.png
 sources:
