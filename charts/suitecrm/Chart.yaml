@@ -6,6 +6,7 @@ description: SuiteCRM is a completely open source enterprise-grade Customer Rela
 keywords:
 - suitecrm
 - CRM
+- 产品服务
 home: http://www.suitecrm.com
 sources:
 - https://github.com/bitnami/bitnami-docker-suitecrm
