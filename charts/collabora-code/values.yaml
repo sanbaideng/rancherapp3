@@ -21,8 +21,8 @@ service:
 ingress:
   enabled: true
   annotations: {}
-  paths: []
-  hosts: [${host}]
+  paths: /
+  host: ${host}
   tls: []
 
 collabora:
