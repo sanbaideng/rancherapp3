@@ -5,6 +5,7 @@ appVersion: 1.5.0
 icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
 keywords:
 - 其他
+- 研发设计
 description: Goldpinger makes calls between its instances for visibility and alerting.
 home: https://github.com/bloomberg/goldpinger
 sources:
