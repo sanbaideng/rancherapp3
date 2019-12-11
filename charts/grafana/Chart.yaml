@@ -16,3 +16,5 @@ maintainers:
   - name: maorfr
     email: maorfr@gmail.com
 engine: gotpl
+keywords:
+  - 研发设计
