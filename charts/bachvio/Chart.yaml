@@ -2,7 +2,7 @@ apiVersion: v1
 name: bachvio
 version: 0.1.0
 appVersion: v1.0
-description: Ó¦ÓÃÃèÊö
+description: "ä¸­ç”µäº’è”å¯è§†åŒ–è¿è¥å¹³å°"
 keywords: 
   - bachvio
-  - ¶©µ¥¿ÉÊÓ»¯
+  - è¿è¥ç®¡ç†
