@@ -1,6 +1,6 @@
 image:
-  repository: reg.cecii.cn/bachvio/bachvio
-  tag: v1.0.0
+  repository: reg.cecii.cn/pub/bachvio-all
+  tag: v2
   port: 8080
   pullPolicy: Always
     
