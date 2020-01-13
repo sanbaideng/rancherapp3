@@ -64,7 +64,7 @@ readinessProbe:
 ingress:
   ## Set to true to enable ingress record generation
   enabled: true
-  host: viotest.cloud.cecii.cn
+  host: ${host}
   tls: false
   tlsSecret: wordpress.local-tls
   annotations:
