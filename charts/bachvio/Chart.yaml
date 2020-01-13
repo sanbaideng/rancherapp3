@@ -1,9 +1,7 @@
-apiVersion: v1
 name: bachvio
-version: 0.1.0
-appVersion: v1.0
-description: "中电互联可视化运营平台"
-icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/vio.png
-keywords: 
-  - bachvio
-  - 运营管理
+version: 0.2.10
+appVersion: 4.9.8
+description: bachvio
+icon: https://raw.githubusercontent.com/sanbaideng/rancherapp4/master/icons/vio.png
+keywords:
+- iot
