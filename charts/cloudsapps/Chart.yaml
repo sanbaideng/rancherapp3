@@ -1,0 +1,11 @@
+apiVersion: v1
+name: cloudsapps
+version: 1.0
+description: cloudsapps
+keywords:
+  - cloudsapps
+  - 生产制造
+home: ${home}
+icon: cloudsapps
+appVersion: 1.0
+
