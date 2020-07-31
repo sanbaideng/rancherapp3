@@ -1,0 +1,9 @@
+apiVersion: v1
+name: 环球网校
+version: 1.0
+description: 环球网校是专门用于考证学习的app，主要是课程直播，习题练习
+keywords:
+home: ${home}
+icon: https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2309181523,3376829556&fm=26&gp=0.jpg
+appVersion: 1.0
+
