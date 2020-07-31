@@ -1,0 +1,9 @@
+apiVersion: v1
+name: 验证类型
+version: yzlx:v1
+description: 验证
+keywords:
+home: ${home}
+icon: http://ss.png
+appVersion: yzlx:v1
+
