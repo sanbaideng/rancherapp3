@@ -3,6 +3,8 @@ name: 验证类型
 version: yzlx:v1
 description: 验证
 keywords:
+  - 验证
+  - 产品服务
 home: ${home}
 icon: http://ss.png
 appVersion: yzlx:v1
