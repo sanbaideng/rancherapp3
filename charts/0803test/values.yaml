@@ -1,0 +1,24 @@
+image:
+  name: "172.16.21.118/devops/0"
+  tag: ""
+  port: 8080
+
+  volumes:
+    - path: te
+      size: 0
+      cephPath: 
+
+  envs: []
+
+ceph:
+  monitors:
+    - 172.16.20.7:6789
+    - 172.16.20.239:6789
+    - 172.16.20.77:6789
+  user: admin
+  secret: AQBwbm9dbB47GBAAKjh8XWL3d9ss823f6EPElw==
+
+ingress:
+  enabled: false
+  host: ${host}
+
