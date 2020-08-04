@@ -1,0 +1,11 @@
+apiVersion: v1
+name: te
+version: te
+description: te
+keywords:
+  - te
+  - 生产制造
+home: ${home}
+icon: te
+appVersion: te
+
