@@ -36,10 +36,11 @@ spec:
         {{- end }}
         - name: DB_HOST
         {{- if .Values.mariadb.enabled }}
-          value: "172.16.20.199"
+          #value: "172.16.20.199"
+          value: {{ include "mariadb.fullname"  | quote }}
         {{- end }}
         - name: DB_PORT
-          value: "33308"
+          value: "3306"
         - name: INGRESS_URL
           value: "{{ .Values.ingress.host }}"
         ports:
