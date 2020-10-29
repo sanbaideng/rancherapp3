@@ -1,0 +1,9 @@
+apiVersion: v1
+name: 232
+version: 323
+description: 2323
+keywords:
+home: ${home}
+icon: 2323
+appVersion: 323
+

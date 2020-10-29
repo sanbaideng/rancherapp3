@@ -1,0 +1,11 @@
+apiVersion: v1
+name: test0305
+version: 5.0
+description: test0305
+keywords:
+  - test0305
+  - 生产制造
+home: ${home}
+icon: test0305
+appVersion: 5.0
+
