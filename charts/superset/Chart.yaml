@@ -4,12 +4,12 @@ name: superset
 version: 1.1.6
 appVersion: "0.28.1"
 keywords:
-- bi
-- 研发设计
+  - bi
+  - 研发设计
 home: https://github.com/apache/incubator-superset
-icon: https://superset.incubator.apache.org/_images/s.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/superset.jpg
 sources:
-- https://github.com/apache/incubator-superset
+  - https://github.com/apache/incubator-superset
 maintainers:
-- name: alitari
-  email: alitari67@gmail.com
+  - name: alitari
+    email: alitari67@gmail.com
