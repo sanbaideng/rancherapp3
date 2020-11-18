@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { template "smtpaster.fullname" . } }
+  name: {{ template "smtpaster.fullname" . }}
   labels:
-    app: { { template "smtpaster.name" . } }
-    chart: { { template "smtpaster.chart" . } }
-    release: { { .Release.Name } }
-    heritage: { { .Release.Service } }
+    app: {{ template "smtpaster.name" . }}
+    chart: {{ template "smtpaster.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
-      targetPort: { { .Values.service.targetPort } }
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
-    app: { { template "smtpaster.name" . } }
-    release: { { .Release.Name } }
+    app: {{ template "smtpaster.name" . }}
+    release: {{ .Release.Name }}

@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: { { template "smtpaster.fullname" . } }
+  name: {{ template "smtpaster.fullname" . }}
   labels:
-    app: { { template "smtpaster.name" . } }
-    chart: { { template "smtpaster.chart" . } }
-    release: { { .Release.Name } }
-    heritage: { { .Release.Service } }
+    app: {{ template "smtpaster.name" . }}
+    chart: {{ template "smtpaster.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  replicas: { { .Values.replicaCount } }
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: { { template "smtpaster.name" . } }
-      release: { { .Release.Name } }
+      app: {{ template "smtpaster.name" . }}
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: { { template "smtpaster.name" . } }
-        release: { { .Release.Name } }
+        app: {{ template "smtpaster.name" . }}
+        release: {{ .Release.Name }}
     spec:
       volumes:
         - name: vol
           hostPath:
             path: /sys/fs/cgroup
       containers:
-        - name: { { .Chart.Name } }
+        - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: { { .Values.image.pullPolicy } }
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
             - name: vol
               mountPath: /sys/fs/cgroup

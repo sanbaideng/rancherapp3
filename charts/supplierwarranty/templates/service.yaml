@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { template "supplierwarranty.fullname" . } }
+  name: {{ template "supplierwarranty.fullname" . }}
   labels:
-    app: { { template "supplierwarranty.name" . } }
-    chart: { { template "supplierwarranty.chart" . } }
-    release: { { .Release.Name } }
-    heritage: { { .Release.Service } }
+    app: {{ template "supplierwarranty.name" . }}
+    chart: {{ template "supplierwarranty.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
-      targetPort: { { .Values.service.targetPort } }
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
-    app: { { template "supplierwarranty.name" . } }
-    release: { { .Release.Name } }
+    app: {{ template "supplierwarranty.name" . }}
+    release: {{ .Release.Name }}

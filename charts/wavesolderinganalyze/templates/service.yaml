@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { template "wavesolderinganalyze.fullname" . } }
+  name: {{ template "wavesolderinganalyze.fullname" . }}
   labels:
-    app: { { template "wavesolderinganalyze.name" . } }
-    chart: { { template "wavesolderinganalyze.chart" . } }
-    release: { { .Release.Name } }
-    heritage: { { .Release.Service } }
+    app: {{ template "wavesolderinganalyze.name" . }}
+    chart: {{ template "wavesolderinganalyze.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
-      targetPort: { { .Values.service.targetPort } }
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
-    app: { { template "wavesolderinganalyze.name" . } }
-    release: { { .Release.Name } }
+    app: {{ template "wavesolderinganalyze.name" . }}
+    release: {{ .Release.Name }}

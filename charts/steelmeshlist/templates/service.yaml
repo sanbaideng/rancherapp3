@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { template "steelmeshlist.fullname" . } }
+  name: {{ template "steelmeshlist.fullname" . }}
   labels:
-    app: { { template "steelmeshlist.name" . } }
-    chart: { { template "steelmeshlist.chart" . } }
-    release: { { .Release.Name } }
-    heritage: { { .Release.Service } }
+    app: {{ template "steelmeshlist.name" . }}
+    chart: {{ template "steelmeshlist.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
-      targetPort: { { .Values.service.targetPort } }
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
-    app: { { template "steelmeshlist.name" . } }
-    release: { { .Release.Name } }
+    app: {{ template "steelmeshlist.name" . }}
+    release: {{ .Release.Name }}
