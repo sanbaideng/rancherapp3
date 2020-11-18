@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: reg.cecii.cn/pub/app2020-allinone
+  repository: reg.cecii.cn/pub/smtall
   tag: v1
   pullPolicy: IfNotPresent
 
