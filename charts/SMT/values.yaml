@@ -12,7 +12,7 @@ image:
 service:
   type: ClusterIP
   nodePort: 30031
-  targetPort: 8080
+  targetPort: 80
   port: 80
 
 ingress:
