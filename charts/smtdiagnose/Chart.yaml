@@ -1,0 +1,10 @@
+apiVersion: v1
+appVersion: "1.0"
+description: SMT产线工序诊断与调节:运用工序诊断与调节技术，确定SMT产线最经济的诊断间隔。既可以用来确定产品的最佳检验间隔，降低检验费用；也可以用来确定生产设备的最佳预防维修周期，以减少设备维修费用，提高设备的完好利用率。
+icon: http://gitlab.cecii.inside/yangyang/rancherapp3/raw/master/icons/iot.png
+keywords:
+  - web
+  - 区域协同
+  - 运营管理
+name: smtdiagnose
+version: 0.1.0
