@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: "1.0"
 description: SMT稳健质量工业互联网解决方案：将稳健质量工程技术、软件技术和SMT行业知识的深度融合，探索了一种工业互联网服务各行业中小企业的解决方案，使得质量更好、成本更低、效率更高；
-icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gear.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/smtall.png
 keywords:
   - web
   - 区域协同
