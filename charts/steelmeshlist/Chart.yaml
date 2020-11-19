@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: "1.0"
 description: 钢网印刷工艺优化:钢网印刷工艺优化软件通过稳健设计技术对钢网印刷工序进行工艺优化，将产品的工艺参数作为可控因子，通过评价噪声因子下的稳健性来选择产品工艺参数的最优名义值，从而提高产品合格率并使产品在市场上稳健可靠。
-icon: http://gitlab.cecii.inside/yangyang/rancherapp3/raw/master/icons/iot.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/%E9%92%A2%E7%BD%91%E5%8D%B0%E5%88%B7%E5%B7%A5%E8%89%BA%E4%BC%98%E5%8C%96.png
 keywords:
   - web
   - 区域协同

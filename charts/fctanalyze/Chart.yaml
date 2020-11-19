@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: "1.0"
 description: FCT工况分析：不良品率P图：判定FCT不良品率是否稳定，监控不良品率是否有异常。UPS趋势图：显示产能随时间变化的情况，了解产能情况，判断是否达标，并分析不同时段的产能达标率。
-icon: http://gitlab.cecii.inside/yangyang/rancherapp3/raw/master/icons/iot.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/FCT%E5%B7%A5%E5%86%B5%E5%88%86%E6%9E%90.png
 keywords:
   - web
   - 区域协同

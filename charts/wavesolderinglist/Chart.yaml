@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: "1.0"
 description: 波峰焊工艺优化：波峰焊工艺优化软件应用稳健设计技术对波峰焊工艺进行工艺优化，将产品的工艺参数作为可控因子，通过评价噪声因子下的稳健性来选择工艺参数的最优名义值，从而提高产品合格率并使产品在市场上稳健可靠。
-icon: http://gitlab.cecii.inside/yangyang/rancherapp3/raw/master/icons/iot.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/%E6%B3%A2%E5%B3%B0%E7%84%8A%E5%B7%A5%E5%B7%A5%E8%89%BA%E4%BC%98%E5%8C%96.png
 keywords:
   - web
   - 区域协同

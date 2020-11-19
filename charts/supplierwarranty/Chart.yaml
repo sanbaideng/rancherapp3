@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: "1.0"
 description: 供应商质保能力评价:首先可以用在供应商质保能力的评价，其次，不仅对企业整体产品适用，对产品生产的每一道工序也适用，如同企业的“血压表”，可以分析企业哪一个产品、哪一道工序是瓶颈点，对企业的质量改进提供方向。
-icon: http://gitlab.cecii.inside/yangyang/rancherapp3/raw/master/icons/iot.png
+icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/%E4%BE%9B%E5%BA%94%E5%95%86%E8%B4%A8%E4%BF%9D%E8%AF%84%E4%BB%B7.png
 keywords:
   - web
   - 区域协同
