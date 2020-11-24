@@ -1,42 +1,42 @@
-# MySQL°æ±¾¡¢rootÃÜÂë
+# MySQLç‰ˆæœ¬ã€rootå¯†ç 
 image:
   repository: mysql
   tag: 5.7.26
   port: 3306
   rootPass: "123456"
-  pullPolicy: IfNotPresent 
+  pullPolicy: IfNotPresent
 
-# ÅäÖÃÎÄ¼ş - LinuxÏÂºöÂÔ´óĞ¡Ğ´ÅäÖÃ
-conf: 
+# é…ç½®æ–‡ä»¶ - Linuxä¸‹å¿½ç•¥å¤§å°å†™é…ç½®
+conf:
   enabled: true
   image: reg.cecii.cn/mysql-data/cnf
   imageTag: v1.0.0
   filePath: /cnf
   pullPolicy: Always
 
-# ³õÊ¼»¯sqlÓï¾ä - ´´½¨Êı¾İ¿â²¢³õÊ¼»¯
-sql: 
+# åˆå§‹åŒ–sqlè¯­å¥ - åˆ›å»ºæ•°æ®åº“å¹¶åˆå§‹åŒ–
+sql:
   enabled: true
   image: reg.cecii.cn/mysql-data/sql
   imageTag: v1.0.0
   filePath: /sql
   pullPolicy: Always
 
-# Êı¾İ³Ö¾Ã»¯ cephfsÅäÖÃ size µ¥Î»G
-persistence: 
+# æ•°æ®æŒä¹…åŒ– cephfsé…ç½® size å•ä½G
+persistence:
   enabled: true
   size: 5
-  ceph: 
+  ceph:
     monitors:
       - 192.168.1.20:6789
       - 192.168.1.22:6789
-      - 192.168.1.23:6789 
+      - 192.168.1.23:6789
     user: admin
-    secretRef: 
+    secretRef:
       name: ceph-secret-client-admin
   path: /javaweb2/mysql
-  
-# mnysql·şÎñÃû
+
+# mnysqlæœåŠ¡å
 service:
   name: javaweb2-mysql
   type: ClusterIP
