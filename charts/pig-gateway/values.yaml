@@ -1,0 +1,23 @@
+image:
+  repository: reg.cecii.cn/pig/gateway
+  tag: v1.0.0
+  port: 9999
+  pullPolicy: Always
+    
+service:
+  name: pig-gateway
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  hosts:
+    - host: gateway.pig.os.cecii.cn
+  tls: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+volumes: []
+ceph: {}

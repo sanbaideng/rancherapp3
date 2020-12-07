@@ -1,0 +1,30 @@
+# Redis版本、root密码
+image:
+  repository: redis
+  tag: 5.0.5
+  port: 6379
+  pullPolicy: IfNotPresent 
+
+# 数据持久化 cephfs配置 size 单位G
+persistence: 
+  enabled: true
+  size: 5
+  ceph: 
+    monitors:
+      - 192.168.1.20:6789
+      - 192.168.1.22:6789
+      - 192.168.1.23:6789
+    user: admin
+    secretRef: 
+      name: ceph-secret-client-admin
+  path: /pig/redis
+  
+# redis服务名
+service:
+  name: pig-redis
+  type: ClusterIP
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
