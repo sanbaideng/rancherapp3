@@ -6,7 +6,7 @@ image:
   dbPassword: "123456"
   port: 8080
   pullPolicy: Always
-
+    
 service:
   type: ClusterIP
 
@@ -25,36 +25,36 @@ volumes: []
 
 ceph: {}
 
-## mysql √Ö√§√ñ√É
-mysql:
+## mysql ≈‰÷√
+mysql: 
   image:
     repository: mysql
     tag: 5.7.26
     port: 3306
     rootPass: "123456"
-    pullPolicy: IfNotPresent
-  conf:
+    pullPolicy: IfNotPresent 
+  conf: 
     enabled: true
     image: reg.cecii.cn/mysql-data/cnf
     imageTag: v1.0.0
     filePath: /cnf
     pullPolicy: Always
-  sql:
+  sql: 
     enabled: true
     image: reg.cecii.cn/mysql-data/sql
     imageTag: v1.0.0
     filePath: /sql
     pullPolicy: Always
-  persistence:
+  persistence: 
     enabled: true
     size: 3
-    ceph:
+    ceph: 
       monitors:
         - 192.168.1.20:6789
         - 192.168.1.22:6789
-        - 192.168.1.23:6789
+        - 192.168.1.23:6789 
       user: admin
-      secretRef:
+      secretRef: 
         name: ceph-secret-client-admin
     path: /javaweb2/mysql
   service:
