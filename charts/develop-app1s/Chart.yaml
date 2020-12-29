@@ -1,0 +1,11 @@
+apiVersion: v1
+name: develop-app1s
+version: ddd
+description: sdfsf
+keywords:
+  - sss
+  - 研发设计
+home: ${home}
+icon: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1735300731,83723593&fm=26&gp=0.jpg
+appVersion: ddd
+
