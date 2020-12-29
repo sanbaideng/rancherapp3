@@ -1,7 +1,7 @@
 image:
   name: "172.16.21.118/devops/0"
   tag: ""
-  port: 8081
+  port: 8017
 
   volumes:
     - path: test
