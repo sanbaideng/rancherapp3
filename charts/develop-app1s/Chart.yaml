@@ -1,7 +1,7 @@
 apiVersion: v1
 name: develop-app1s
 version: ddd
-description: sdfsf
+description: 测试引用过
 keywords:
   - guanjianzi 
   - 研发设计
