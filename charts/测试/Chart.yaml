@@ -1,9 +1,0 @@
-apiVersion: v1
-name: 测试
-version: test1
-description: 测试devops
-keywords:
-home: ${home}
-icon: http://test.png
-appVersion: test1
-

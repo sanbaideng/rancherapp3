@@ -1,9 +1,0 @@
-apiVersion: v1
-appVersion: "1.0"
-description: Siemens STAR-CCM+提供了业界前沿的计算流体动力学软件，让您得以对任何包含液体、结构以及所有关联物理场的工程问题进行模拟。
-icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/star-ccm.jpg
-keywords:
-- gui
-- 研发设计
-name: starccm
-version: 0.1.0

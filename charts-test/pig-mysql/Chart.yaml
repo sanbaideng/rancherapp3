@@ -1,7 +1,0 @@
-apiVersion: v1
-name: mysql
-version: 0.1.0
-appVersion: v5.7.26
-description: ""
-keywords: 
-  - mysql

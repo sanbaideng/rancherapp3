@@ -1,9 +1,0 @@
-apiVersion: v1
-name: javaweb2
-version: 0.1.0
-appVersion: v1.0
-description: "javaweb2"
-keywords: 
-  - JavaWeb2
-  - JDBC
-  - Mysql

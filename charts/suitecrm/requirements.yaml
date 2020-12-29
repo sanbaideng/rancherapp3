@@ -1,4 +1,0 @@
-dependencies:
-- name: mariadb
-  version: 6.12.2
-  condition: mariadb.enabled

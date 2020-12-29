@@ -1,9 +1,0 @@
-apiVersion: v1
-appVersion: "1.0"
-description: gitlab
-icon: https://markdowna.oss-cn-shenzhen.aliyuncs.com/icon/gitlab.png
-keywords:
-  - 研发工具
-  - 研发设计
-name: gitlab
-version: 0.1.0

@@ -1,9 +1,0 @@
-apiVersion: v1
-name: 分1
-version: 问问1
-description: 问问1
-keywords:
-home: ${home}
-icon: 发1
-appVersion: 问问1
-
