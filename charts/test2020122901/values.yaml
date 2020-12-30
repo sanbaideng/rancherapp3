@@ -1,7 +1,7 @@
 image:
   name: "172.16.21.118/elfinder06/v1"
   tag: "tegs"
-  port: 8025
+  port: 81
 
   volumes: []
 
