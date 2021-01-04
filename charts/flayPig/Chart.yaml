@@ -1,0 +1,11 @@
+apiVersion: v1
+name: flayPig
+version: 1.0
+description: 中兴通讯股份有限公司，是全球领先的综合通信解决方案提供商，中国最大的通信设备上市公司。主要产品包括：2G/3G/4G/5G无线基站与核心网、IMS、固网接入与承载、光网络、芯片、高端路由器、智能交换机、政企网、大数据、云计算、数据中心、手机及家庭终端、智慧城市、ICT业务，以及航空、铁路与城市轨道交通信号传输设备。 中兴通讯在香港和深圳两地上市。2015年，中兴通讯营业收入超过1000亿。2016年8月25日，中兴通讯发布2016年半年财报，在集团整体营业收入、经营活动现金净流、净利润等方面均表现亮眼。 [1]  2016年8月，中兴通讯在"2016中国企业500强"中排名第150位。2017年11月，在“2017年中国大陆创新企业百强榜单”中位列梯级I。
+keywords:
+  - 旅行、话费
+  - 运营管理
+home: ${home}
+icon: https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=logo&hs=2&pn=2&spn=0&di=17820&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1203887827%2C2007681430&os=541096018%2C391613960&simid=3392950336%2C176922203&adpicid=0&lpn=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=logo&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F17%2F08%2F25%2Fcb9cde9d93bc2bd93d594cb78e466e53.jpg!%2Ffwfh%2F804x1056%2Fqu
+appVersion: 1.0
+
